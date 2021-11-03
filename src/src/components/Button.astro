@@ -1,0 +1,33 @@
+---
+const {link} = Astro.props;
+const {text} = Astro.props;
+---
+<style lang="scss">
+    .btn {
+        display: inline-block;
+        padding: 6px 36px 6px 16px;
+        line-height: 1em;
+        font-weight: bold;
+        font-size: 14px;
+        background-color: #e84e91;
+        text-decoration: none;
+        color: #ffffff;
+        border-radius: 100px;
+        transition: opacity 0.15s;
+
+        span {
+            line-height: 0px;
+            font-size: 20px;
+            margin-top: 6.5px;
+            margin-left: 4px;
+            position: absolute;
+        }
+
+        &:hover {
+            opacity: 0.7;
+            transition: opacity 0.15s;
+        }
+    }
+</style>
+
+<a href={link} class="btn">{text} <span class="material-icons">arrow_right_alt</span></a>

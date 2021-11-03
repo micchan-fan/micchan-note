@@ -1,0 +1,45 @@
+---
+import Header from '../components/Header.astro';
+const {title} = Astro.props;
+---
+
+<style lang="scss">
+
+body {
+    /* padding: 4rem 2rem;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center; */
+    background: #FFE2F0;
+    color: #333333;
+    background-image: url(/bg.png);
+    background-size: 100px;
+    background-repeat: repeat;
+    padding-top: 76px;
+  
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+</style>
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title} | みっちゃんノート（矢久保美緒さんファンサイト）</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link rel="stylesheet" href="/style/global.css">
+</head>
+<body>
+    <Header />
+    <main>
+        <slot />
+    </main>
+</body>
+</html>
