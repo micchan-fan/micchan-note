@@ -1,116 +1,171 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProfilePic from '../components/ProfilePic.astro';
+import ScheduleList from '../components/ScheduleList.astro';
+import NewsList from '../components/NewsList.astro';
 import Button from '../components/Button.astro';
-import Tour from '../components/Tour.astro';
-let title = 'My Astro Site';
+let title = 'ホーム';
+
 ---
 
 <style lang="scss">
-    .top {
-        height: 300px;
-        width: 100%;
+	.top {
+		height: 300px;
+		width: 100%;
 
-        border-radius: 8px;
-        
-        background: url(/top.jpg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
+		border-radius: 8px;
+		
+		background: url(/top.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 
-        position: relative;
-        
-        margin-bottom: 48px; 
+		position: relative;
+		
+		margin-bottom: 60px; 
 
-        &__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(255,255,255,0.3);
-            filter: sepia(1);
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
+		&__overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(255,255,255,0.3);
+			filter: sepia(1);
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
 
-        &__caption {
-            font-size: 12px;
-            color: #ffffff;
-            text-decoration: none;
-            position: absolute;
-            bottom: 4px;
-            right: 4px;
-            z-index: 10;
-            text-shadow: 0 0px 10px #000000;
-        }
-    }
+		&__caption {
+			font-size: 12px;
+			color: #ffffff;
+			text-decoration: none;
+			position: absolute;
+			bottom: 4px;
+			right: 4px;
+			z-index: 10;
+			text-shadow: 0 0px 10px #000000;
+		}
+	}
 
-    .profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 16px;
-        margin-bottom: 48px;
+	.profile {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 16px;
+		margin-bottom: 84px;
 
-        &__picture {
-            width: 25%;
-            max-width: 200px;
-        }
+		&__picture {
+			width: 25%;
+			max-width: 200px;
+		}
 
-        &__intro {
-            width: 75%;
-            padding-left: 24px;
+		&__intro {
+			width: 75%;
+			padding-left: 24px;
 
-            h2 {
-                font-size: 36px;
-                letter-spacing: 0.08em;
-                margin-bottom: 16px;
-                display: inline-block;
-                background:linear-gradient(transparent 75%, #FFE11D 0%);
+			h2 {
+				font-size: 36px;
+				letter-spacing: 0.08em;
+				margin-bottom: 16px;
+				display: inline-block;
+				background:linear-gradient(transparent 75%, #FFE11D 0%);
 
-                span {
-                    font-size: 24px;
-                    margin-left: 4px;
-                }
-            }
-            
-            p {
-                margin-bottom: 8px;
-            }
-        }
-    }
+				span {
+					font-size: 24px;
+					margin-left: 4px;
+				}
+			}
+			
+			p {
+				margin-bottom: 8px;
+			}
+		}
+	}
 
-    .outline {
-        padding: 0 16px;
+	.updates {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 60px;
 
-        p {
-            background-color: #ffffff;
-            padding: 16px;
-            border: double #000000;
-        }
-    }
+		&__container {
+			width: calc(50% - 16px);
+			background-color: #ffffff;
+			padding: 16px;
+			border-radius: 8px;
+			position: relative;
+			overflow: hidden;
+
+			&:first-child {
+				margin-right: 8px;
+			}
+			&:last-child {
+				margin-left: 8px;
+			}
+			&__title {
+				margin-bottom: 8px;
+			}
+			&__bgTitle {
+				position: absolute;
+				top: -12px;
+				right: 0px;
+				font-size: 80px;
+				font-family: "Caveat", cursive;
+				color: rgb(255 225 29 / 30%);
+				line-height: 1em;
+			}
+			&__main {
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	.outline {
+
+		p {
+			background-color: #ffffff;
+			padding: 16px;
+			border: double #000000;
+		}
+	}
 </style>
 
 <BaseLayout title={title}>
-    <div class="top">
-        <div class="top__overlay"></div>
+	<div class="top">
+		<div class="top__overlay"></div>
 
-        <a href="https://blog.nogizaka46.com/mio.yakubo/smph/2021/10/063976.php" class="top__caption">乃木坂46 矢久保美緒 公式ブログ「#乃木坂28thSGアンダーライブDay1」</a>
-    </div>
+		<a href="https://blog.nogizaka46.com/mio.yakubo/smph/2021/10/063976.php" class="top__caption">乃木坂46 矢久保美緒 公式ブログ「#乃木坂28thSGアンダーライブDay1」</a>
+	</div>
 
-    <div class="profile">
-        <div class="profile__picture">
-            <ProfilePic />
-        </div>
-        <div class="profile__intro">
-            <h2><ruby>矢久保<rt>やくぼ</rt><ruby>美緒<rt>みお</rt></ruby> <span>さん</span></h2>
-            <p>乃木坂46 4期生。2018年8月19日に坂道合同オーディションに合格、11月29日に乃木坂46へ配属。現在は、アンダーメンバーとして活動する傍ら、FM FUJI「タイムちゃん」のレギュラーパーソナリティなどを務める。</p>
-            <Button link="aaaa" text="詳しいプロフィール" />
-        </div>
-    </div>
+	<div class="profile">
+		<div class="profile__picture">
+			<ProfilePic />
+		</div>
+		<div class="profile__intro">
+			<h2><ruby>矢久保<rt>やくぼ</rt><ruby>美緒<rt>みお</rt></ruby> <span>さん</span></h2>
+			<p>乃木坂46 4期生。2018年8月19日に坂道合同オーディションに合格、11月29日に乃木坂46へ配属。現在は、アンダーメンバーとして活動する傍ら、FM FUJI「タイムちゃん」のレギュラーパーソナリティなどを務める。</p>
+			<Button link="profile" text="詳しいプロフィール" />
+		</div>
+	</div>
 
-    <div class="outline">
-        <p>このサイトは、みっちゃん (矢久保美緒さん) の魅力をもっと多くの方に知ってもらいたいとの想いで、個人が運営している非公式ファンサイトです。<br />
-        そして同じくみっちゃんを推している方！このサイトのソースは<a href="#">GitHub</a>で公開されているので、ぜひ一緒になって伝えていきませんか？</p>
-    </div>
+	<div class="updates">
+		<div class="updates__container">
+			<h2 class="updates__container__title">スケジュール</h2>
+			<span class="updates__container__bgTitle">Schedule</span>
+			<div class="updates__container__main">
+				<ScheduleList />
+			</div>
+			<Button link="schedules" text="もっとみる" />
+		</div>
+
+		<div class="updates__container">
+			<h2 class="updates__container__title">ニュース</h2>
+			<span class="updates__container__bgTitle">News</span>
+			<div class="updates__container__main">
+				<NewsList />
+			</div>
+			<Button link="news" text="もっとみる" />
+		</div>
+	</div>
+
 </BaseLayout>

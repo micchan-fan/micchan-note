@@ -1,0 +1,102 @@
+---
+---
+<style lang="scss">
+    footer {
+        width: 100%;
+        background-color: #ffffff;
+        font-size: 16px;
+        line-height: 2em;
+        padding: 16px 0;
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 0 16px 16px 16px;
+            max-width: 1000px;  
+            margin: 0 auto;
+            border-bottom: 1px solid #efefef;
+
+            &__row {
+
+
+                &__header {
+                    font-weight: bold;
+                    color: #333333;
+                }
+
+                ul {
+                    padding-left: 0;
+
+                    li {
+                        list-style-type: none!important;
+
+                        a {
+                            color: #585858;
+                            text-decoration: none;
+
+                            &:hover {
+                                opacity: 0.6;
+                                transition: opacity 0.15s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .copyright {
+            line-height: 1.5em;
+            font-size: 12px;
+            text-align: center;
+            color: #585858;
+            padding-top: 16px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+</style>
+
+<footer>
+    <div class="container">
+        <div class="container__row">
+            <span class="container__row__header">ページ</span>
+            <ul>
+                <li>
+                    <a href="/">ホーム</a>
+                </li>
+                <li>
+                    <a href="/schedule">スケジュール</a>
+                </li>
+                <li>
+                    <a href="/news">ニュース</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container__row">
+            <span class="container__row__header">法的</span>
+            <ul>
+                <li>
+                    <a href="/privacy-policy">プライバシーポリシー</a>
+                </li>
+                <li>
+                    <a href="/code-of-conducts">運営方針</a>
+                </li>
+                <li>
+                    <a href="mailto:info@micchan.fan">問い合わせ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container__row">
+            <span class="container__row__header">相互リンク</span>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <span>© 2021 みっちゃんノート, developing by <a href="https://twitter.com/micchanfan">@micchanfan</a>.</span>
+        <span>このサイトは乃木坂46LLC、SMEその他各種権利者から許諾等を得ているものではありません。</span>
+    </div>
+</footer>

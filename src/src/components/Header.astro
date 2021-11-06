@@ -1,4 +1,5 @@
 ---
+const path = Astro.site.pathname;
 ---
 <style lang="scss">
     header {
@@ -15,29 +16,40 @@
             max-width: 1000px;  
             margin: 0 auto;
             height: 70px;
+
+            a {
+                text-decoration: none;
             
-            h1 {
-                font-size: 24px;
-                font-weight: 900;
-                display: flex;
-                flex-direction: column;
-                color: #ff4697;
+                h1 {
+                    font-size: 24px;
+                    font-weight: 900;
+                    display: flex;
+                    flex-direction: column;
+                    color: #ff4697;
 
-                text-shadow:0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff;
+                    text-shadow:0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff,0 0 3px #ffffff;
 
-                span {
-                    font-size: 13.6px;
+                    span {
+                        font-size: 13.6px;
+                    }
                 }
-            }
+
+            }            
         }
     }
 </style>
 
 <header>
     <div class="container">
-        <h1>📖 みっちゃんノート<span>矢久保美緒さん非公式ファンサイト</span></h1>
+        <a href="/">
+            <h1>📖 みっちゃんノート<span>矢久保美緒さん非公式ファンサイト</span></h1>
+        </a>
         <div>
-            <p>test</p>
+            <a href="/">ホーム</a>
+            <a href="/profile">プロフィール</a>
+            <a href="/works">作品･仕事</a>
+            <a href="/schedules">スケジュール</a>
+            <a href="/news">ニュース</a>
         </div>
     </div>
 </header>

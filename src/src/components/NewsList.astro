@@ -1,0 +1,37 @@
+---
+interface MarkdownFrontmatter {
+	publishDate: number;
+}
+let newsPosts = Astro.fetchContent<MarkdownFrontmatter>('../contents/newsPosts/*.md');
+newsPosts = newsPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+---
+
+<style lang="scss">
+.newsList {
+	display: block;
+	font-size: 16px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+    transition: all 0.15s;
+	margin-bottom: 4px;
+
+	&__scheduleDate {
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	&:hover {
+		text-decoration: underline;
+		color: #e84e91;
+	    transition: all 0.15s;
+	}
+}
+</style>
+
+{newsPosts.slice(0, 3).map((post) => (
+<a href={"news/" + post.file.pathname.split('/').slice(-1).pop().replace('.md', '')} class="newsList">
+	<h3 class="newsList__title">{post.title}</h3>
+	<span class="newsList__scheduleDate">{post.publishDate}</span>
+</a>
+))}

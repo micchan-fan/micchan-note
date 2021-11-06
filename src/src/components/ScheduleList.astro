@@ -1,0 +1,37 @@
+---
+interface MarkdownFrontmatter {
+    schedule: number;
+}
+let schedules = Astro.fetchContent<MarkdownFrontmatter>('../contents/schedules/*.md');
+schedules = schedules.sort((a, b) => new Date(b.schedule).valueOf() - new Date(a.schedule).valueOf());
+---
+
+<style lang="scss">
+.scheduleList {
+	display: block;
+	font-size: 16px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+    transition: all 0.15s;
+	margin-bottom: 4px;
+
+	&__scheduleDate {
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	&:hover {
+		text-decoration: underline;
+		color: #e84e91;
+	    transition: all 0.15s;
+	}
+}
+</style>
+
+{schedules.slice(0, 3).map((schedule) => (
+<a href={"schedule/" + schedule.file.pathname.split('/').slice(-1).pop().replace('.md', '')} class="scheduleList">
+    <h3 class="scheduleList__title">{schedule.title}</h3>
+    <span class="scheduleList__scheduleDate">{schedule.schedule}</span>
+</a>
+))}
