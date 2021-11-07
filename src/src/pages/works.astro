@@ -19,6 +19,49 @@ let title = '作品';
 ---
 
 <style lang="scss">
+	.toc {
+		background-color: #ffffff;
+		overflow: hidden;
+		border-radius: 8px;
+		margin-bottom: 60px;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			padding: 0;
+
+			li {
+				list-style: none;
+				width: 25%;
+				border-style: solid;
+				border-color: #efefef;
+				border-width: 0 1px 0 0;
+
+				&:last-child {
+					border-right: 0;
+				}
+
+				a {
+					width: 100%;
+					height: 100%;
+					text-align: center;
+					display: block;
+					font-size: 20px;
+					font-weight: bold;
+					text-decoration: none;
+					color: #333333;
+					padding: 8px;
+
+					&:hover {
+						background-color: #ff4697;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+
 	.discography {
 		&__container {
 			display: flex;
@@ -84,9 +127,18 @@ let title = '作品';
 </style>
 
 <BaseLayout title={title}>
-	<PageHeader title={title} />
+	<PageHeader title={title} marginBottom="16" />
 
-	<div class="discography">
+	<div class="toc">
+		<ul>
+			<li><a href="#discography">ディスコグラフィー</a></li>
+			<li><a href="#mv">MV</a></li>
+			<li><a href="#live">ライブ</a></li>
+			<li><a href="#drama">ドラマ</a></li>
+		</ul>
+	</div>
+
+	<div class="discography" id="discography">
 		<MiddleHeader title="ディスコグラフィー" />
 		<div class="discography__container">
 			{discography.map((item)=>(<DiscCard data={item} />))}
@@ -94,7 +146,7 @@ let title = '作品';
 		</div>
 	</div>
 
-	<div class="mv">
+	<div class="mv" id="mv">
 		<MiddleHeader title="MV" />
 		<div class="mv__container">
 			{mv.map((item)=>(<MvCard data={item} />))}
@@ -102,8 +154,8 @@ let title = '作品';
 		</div>
 	</div>
 	
-	<div class="live">
-		<MiddleHeader title="ライブ･コンサート" />
+	<div class="live" id="live">
+		<MiddleHeader title="ライブ" />
 		<Accordion>
 			{live.map((item)=>(
 				<AccordionItem header={item.title}>
@@ -143,18 +195,13 @@ let title = '作品';
 		</Accordion>
 	</div>
 	
-	<div class="drama">
+	<div class="drama" id="drama">
 		<MiddleHeader title="ドラマ" />
 		<div class="drama__container">
 			{drama.map((item)=>(<DramaCard data={item} />))}
 			<div class="drama__container__hiddenBox"></div>
 		</div>
 	</div>
-	
-	
-
-
-	
 
 	<!-- Todo: ディスコグラフィ・YouTube-->
 	<!-- Todo: ポジション-->
