@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MiddleHeader from '../components/MiddleHeader.astro';
+let title = '運営方針';
+---
+
+<style lang="scss">
+    p {
+        margin-bottom: 16px;
+    }
+</style>
+
+<BaseLayout title={title}>
+	<MiddleHeader title="各権利者との関係性" />
+    <p>このサイトは乃木坂46LLC、ソニー・ミュージックエンタテインメント、その他各種権利者から許諾等を得ているものではありません。</p>
+
+    <MiddleHeader title="権利保護に関する表明" />
+    <p>このサイトは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、お手数をおかけいたしますがメールにてご連絡ください。迅速に対応いたします。</p>
+    
+    <MiddleHeader title="リンクについて" />
+    <p>このサイトは原則としてリンクフリーです。リンクを行う場合の許可や連絡は不要です。ただし、インラインフレームの使用や画像の直リンク、そのほか負荷が掛かる行為は固くお断りいたします。</p>
+    <MiddleHeader title="問い合わせ先" />
+    <p><a href="mailto:info[@]micchan.fan">info[@]micchan.fan</a>までご連絡ください。</p>
+
+</BaseLayout>
