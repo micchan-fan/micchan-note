@@ -1,10 +1,11 @@
 ---
 const {title} = Astro.props;
+const {marginBottom} = Astro.props;
+
 ---
 
 <style lang="scss">
     .pageHeader {
-        margin-bottom: 60px;
         padding: 8px;
         background-color: #ffffff;
         border-radius: 8px;
@@ -46,7 +47,7 @@ const {title} = Astro.props;
     }
 </style>
 
-<div class="pageHeader">
+<div class="pageHeader" style={`margin-bottom: ${marginBottom ? marginBottom : 60}px`}>
     <div class="pageHeader__container">
         <h1>{title}</h1>
     </div>
