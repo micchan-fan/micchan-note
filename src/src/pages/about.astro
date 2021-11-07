@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import MiddleHeader from '../components/MiddleHeader.astro';
+let title = 'このサイトについて';
+---
+
+<style lang="scss">
+    .content {
+        margin-bottom: 16px;
+    }
+</style>
+
+<BaseLayout title={title}>
+    <PageHeader title={title} />
+
+    <div class="content">
+        <MiddleHeader title="「みっちゃんノート」の由来" />
+        <p>矢久保さんがMCを務められている、FM-FUJI「タイムちゃん」内のコーナー「みっちゃんノート」からとっています。</p>
+        <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">📢新コーナー『みっちゃんノート』📢<br><br>みっちゃんが今後覚えるべき”モノゴト”を募集❗️<br><br>ただし…<br><br>🟢「あいのり」→昔の「テラスハウス」みたいなもの<br><br>…という感じで、現代版に置き換えた場合の説明も書いてください👍<br><br>📩tmy@fmfuji.jp<br>※件名は「ノート」でお願いします📖<a href="https://twitter.com/hashtag/%E3%82%BF%E3%82%A4%E3%83%A0%E3%81%A1%E3%82%83%E3%82%93?src=hash&amp;ref_src=twsrc%5Etfw">#タイムちゃん</a></p>&mdash; タイムちゃん (@fmfuji_timechan) <a href="https://twitter.com/fmfuji_timechan/status/1397145360041005056?ref_src=twsrc%5Etfw">2021年5月25日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    
+    <div class="content">
+        <MiddleHeader title="デザインのこだわりは?" />
+        <p>背景には、矢久保さんが「のぎおび」のフリップに書いた絵をベースにしているほか、各ページのヘッダーは個別マフラータオルのデザインに合わせていたりします。</p>
+    </div>
+
+    <div class="content">
+        <MiddleHeader title="サイトを一緒に作りたいです! / サイトの内容に誤りがあります!" />
+        <p>このサイトはGitHubで公開されており、どなたもPull Requestを送ることができます。ぜひ同じ界隈の方は<a href="#">こちら</a>からコミットお待ちしています!</p>
+    </div>
+
+    <div class="content">
+        <MiddleHeader title="各ページの掲載ポリシー" />
+        <h3>プロフィール / 沿革</h3>
+        <p>矢久保さんが初めてだったこと（初全体ライブ等）は記載しますが、個別の出演や掲載などは記載しません。</p>
+        <h3>作品</h3>
+        <p>番組出演や、雑誌掲載については、作品ページではなくニュースページに掲載します。現時点で作品に含むものは [楽曲] [MV] [ライブ] [ドラマ] です。</p>
+    </div>
+
+    
+
+
+
+</BaseLayout>
