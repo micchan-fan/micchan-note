@@ -1,0 +1,101 @@
+---
+const {header} = Astro.props
+---
+<li class="accordion__item">
+	<h3>
+		<button
+			id="accordion-header-1"
+			class="accordion__header"
+			aria-expanded="false"
+			aria-controls="accordion-panel-1"
+			onclick="toggleAccordionItem()"
+		>
+			<span class="material-icons header__toggle-indicator" style="position: absolute;font-size: 32px;left: 4px;top: 6px;color: #585858;">arrow_right</span>
+			{header}  
+		</button>
+	</h3>
+	<div
+		id="accordion-panel-1"
+		class="accordion__panel"
+		aria-labelledby="accordion-header-1"
+	>
+		<div class="panel__inner">
+			<slot />
+		</div>
+	</div>
+</li>
+
+<style lang="scss">
+	.accordion__item,
+	.accordion__header {
+		width: 100%;
+	}
+
+	.accordion__header {
+		text-align: left;
+		padding: 16px;
+
+		border: none;
+		background: none;
+		font-family: inherit;
+		font-size: 20px;
+		font-weight: bold;
+		position: relative;
+		padding: 8px 8px 8px 36px;
+
+		span {
+			position: absolute;
+			font-size: 32px;
+			left: 4px;
+			top: 6px;
+			color: #585858;
+		}
+
+		&:hover {
+			background-color: rgb(255 255 255 / 35%);
+			border-radius: 8px;
+		}
+	}
+
+	.accordion__item .accordion__header {
+		border-bottom: 0;
+
+		// improved focus outline
+		&:focus {
+
+		}
+	}
+
+	// add border if there is only one and to the last one
+	.accordion__item:only-of-type,
+	.accordion__item:last-of-type {
+		.accordion__header {
+		}
+
+		.accordion__panel {
+		}
+	}
+
+	.accordion__panel {
+		visibility: hidden;
+		overflow: hidden;
+		height: 0;
+		transition: height 0.3s ease-in-out, visibility 0s 0.3s;
+	}
+
+	.panel__inner {
+		padding: 8px 8px 24px 36px;
+	}
+
+	// show panel when toggled
+	.is-active {
+		.accordion__header {
+		}
+
+		.accordion__panel {
+			visibility: visible;
+			height: auto;
+			transition: height 0.3s ease-in-out, visibility 0s 0s;
+		}
+	}
+</style>
