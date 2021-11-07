@@ -1,6 +1,8 @@
 ---
 const {link} = Astro.props;
 const {text} = Astro.props;
+const {openInNewWindow} = Astro.props;
+let isOpenInNewWindow = (openInNewWindow == 'true') ? Boolean(true) : Boolean(false);
 ---
 <style lang="scss">
     .btn {
@@ -30,4 +32,6 @@ const {text} = Astro.props;
     }
 </style>
 
-<a href={link} class="btn">{text} <span class="material-icons">arrow_right_alt</span></a>
+<a href={link} class="btn" target={!isOpenInNewWindow ? "" : "_brank"} rel={!isOpenInNewWindow ? "" : "noopener"}>
+    {text} <span class="material-icons">arrow_right_alt</span>
+</a>
