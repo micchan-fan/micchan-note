@@ -1,57 +1,54 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProfilePic from '../components/ProfilePic.astro';
-import Button from '../components/Button.astro';
-let title = 'ホーム';
+import PageHeader from '../components/PageHeader.astro';
+import MiddleHeader from '../components/MiddleHeader.astro';
+import MvCard from '../components/MvCard.astro';
+import mv from '../contents/works/mv.json';
+
+let title = '作品･仕事';
 
 ---
 
 <style lang="scss">
-	.profile {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0 16px;
-		margin-bottom: 84px;
+	.discography {
 
-		&__picture {
-			width: 25%;
-			max-width: 200px;
+	}
+
+	.mv {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
 		}
 
-		&__intro {
-			width: 75%;
-			padding-left: 24px;
-
-			h2 {
-				font-size: 36px;
-				letter-spacing: 0.08em;
-				margin-bottom: 16px;
-				display: inline-block;
-				background:linear-gradient(transparent 75%, #FFE11D 0%);
-
-				span {
-					font-size: 24px;
-					margin-left: 4px;
-				}
-			}
-			
-			p {
-				margin-bottom: 8px;
-			}
+		> article:nth-child(odd) {
+			margin-right: 8px;
+		}
+		> article:nth-child(even) {
+			margin-right: 8px;
 		}
 	}
+
 </style>
 
 <BaseLayout title={title}>
-	<div class="profile">
-		<div class="profile__picture">
-			<ProfilePic />
-		</div>
-		<div class="profile__intro">
-			<h2><ruby>矢久保<rt>やくぼ</rt><ruby>美緒<rt>みお</rt></ruby> <span>さん</span></h2>
-			<p>乃木坂46 4期生。2018年8月19日に坂道合同オーディションに合格、11月29日に乃木坂46へ配属。現在は、アンダーメンバーとして活動する傍ら、FM FUJI「タイムちゃん」のレギュラーパーソナリティなどを務める。</p>
-			<Button link="aaaa" text="詳しいプロフィール" />
+	<PageHeader title={title} />
+
+	<div class="mv" style="margin-top:500px;">
+		<MiddleHeader title="MV" />
+		<div class="mv__container">
+			{mv.map((item)=>(<MvCard data={item} />))}
 		</div>
 	</div>
+
+
+	
+
+	<!-- Todo: ディスコグラフィ・YouTube-->
+	<!-- Todo: ポジション-->
+	<!-- Todo: レギュラー番組-->
+
+	<!-- Todo: 出演はスケジュールにまとめる-->
+	<!-- Todo: ロケ地欲しいよねー。-->
 </BaseLayout>

@@ -1,0 +1,94 @@
+---
+import Button from '../components/Button.astro';
+const {data} = Astro.props;
+---
+
+<script>
+let client_w = document.getElementByClas('mvCard').clientWidth;
+console.log(client_w + 'px');
+</script>
+
+<style lang="scss">
+    .mvCard {
+        max-width: 484px;
+        width: calc(50% - 8px);
+        margin-bottom: 36px;
+    
+        &__header {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+            background-color: #efefef;
+
+            &::before {
+                content:"";
+                display: block;
+                padding-top: 56.25%; /* 高さと幅の比を16:9に固定。9/16*100=56.25 */
+            }
+            > iframe {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            &__caption {
+                position: absolute;
+                display: inline-block;
+                right: 8px;
+                bottom: 4px;
+                font-size: 16px;
+                color: #ffffff;
+                text-shadow: 0 1px 8px #757575;
+            }
+        }
+
+        &__body {
+            background-color: #ffffff;
+            padding: 16px;
+
+            h3 {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            p {
+                margin-bottom: 8px;
+            }
+        }
+
+        &__footer {
+            background-color: #ffffff;
+            border-radius: 0 0 8px 8px;
+            padding: 0 16px 16px 16px;
+
+            p {
+                font-size: 13px;
+                color: #757575;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+</style>
+
+<article class="mvCard" id="mvCard">
+    <!-- Todo: YouTubeがないケースを想定していないので、propertyを用意する-->
+        <div class="mvCard__header">
+            <iframe src={"https://www.youtube.com/embed/" + data.youtubeId} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <span class="mvCard__header__caption">監督: {data.director}</span>
+        </div>
+        <div class="mvCard__body">
+            <h3>{data.title}</h3>
+            <p>{data.description}</p>
+            <Button text="YouTubeで見る" link={"https://youtube.com/watch?v=" + data.youtubeId} openInNewWindow=true />
+        </div>
+        <div class="mvCard__footer">
+            <p>シングル: <span>{data.singleTitle} ({data.singleType})</span>／リリース: <span>{data.release}</span>／楽曲種別: <span>{data.type}</span>／ポジション: <span>{data.position}</span></p>
+        </div>
+</article>
