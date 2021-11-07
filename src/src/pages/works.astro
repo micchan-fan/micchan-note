@@ -8,6 +8,7 @@ import DiscCard from '../components/DiscCard.astro';
 import DramaCard from '../components/DramaCard.astro';
 import Accordion from '../utils/Accordion.astro'
 import AccordionItem from '../utils/AccordionItem.astro'
+import WIP from '../components/Wip.astro';
 
 import mv from '../contents/works/mv.json';
 import discography from '../contents/works/discography.json';
@@ -138,6 +139,9 @@ let title = '作品';
 		</ul>
 	</div>
 
+	<WIP text="レギュラー番組は別ページにまとめる予定です" />
+	<WIP text="雑誌掲載情報、ロケ地情報を別ページにまとめる予定です" />
+
 	<div class="discography" id="discography">
 		<MiddleHeader title="ディスコグラフィー" />
 		<div class="discography__container">
@@ -202,6 +206,7 @@ let title = '作品';
 			<div class="drama__container__hiddenBox"></div>
 		</div>
 	</div>
+
 
 	<!-- Todo: ディスコグラフィ・YouTube-->
 	<!-- Todo: ポジション-->
