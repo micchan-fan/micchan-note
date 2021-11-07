@@ -3,7 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import MiddleHeader from '../components/MiddleHeader.astro';
 import MvCard from '../components/MvCard.astro';
+import DiscCard from '../components/DiscCard.astro';
 import mv from '../contents/works/mv.json';
+import discography from '../contents/works/discography.json';
 
 let title = '作品･仕事';
 
@@ -11,7 +13,19 @@ let title = '作品･仕事';
 
 <style lang="scss">
 	.discography {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
 
+			&__hiddenBox {
+				display: block;
+				content: '';
+				max-width: 301.33px;
+				width: calc(33.33% - 16px);
+			}
+		}
 	}
 
 	.mv {
@@ -35,13 +49,22 @@ let title = '作品･仕事';
 <BaseLayout title={title}>
 	<PageHeader title={title} />
 
-	<div class="mv" style="margin-top:500px;">
+	<div class="discography" style="margin-top:500px;">
+		<MiddleHeader title="ディスコグラフィー" />
+		<div class="discography__container">
+			{discography.map((item)=>(<DiscCard data={item} />))}
+			<div class="discography__container__hiddenBox"></div>
+		</div>
+	</div>
+
+	<div class="mv">
 		<MiddleHeader title="MV" />
 		<div class="mv__container">
 			{mv.map((item)=>(<MvCard data={item} />))}
 			<div class="mv__container__hiddenBox"></div>
 		</div>
 	</div>
+	
 
 
 	
