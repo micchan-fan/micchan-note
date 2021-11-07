@@ -55,6 +55,36 @@ let title = 'プロフィール';
 		}
 	}
 
+	.colorStick {
+		margin-bottom: 36px;
+
+		&__container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&__color {
+				border-radius: 500px;
+				width: 56px;
+				height: 56px;
+				margin: 0 8px;
+				font-size: 13px;
+				text-align: center;
+				line-height: 50px;
+				border: 3px solid #ffffff;
+				
+				&.pink {
+					background-color: #ff4697;
+					color: #ffffff;
+				}
+				&.yellow {
+					background-color: #FFE11D;
+					color: #333333;
+				}
+			}
+		}
+	}
+
 	.history {
 		margin-bottom: 36px;
 
@@ -114,6 +144,14 @@ let title = 'プロフィール';
 				</tr>
 			</tbody>
 		</table>
+	</div>
+
+	<div class="colorStick">
+		<MiddleHeader title="サイリウムカラー" />
+		<div class="colorStick__container">
+			<div class="colorStick__container__color pink">ピンク</div>
+			<div class="colorStick__container__color yellow">黄色</div>
+		</div>
 	</div>
 
 	<div class="history">
