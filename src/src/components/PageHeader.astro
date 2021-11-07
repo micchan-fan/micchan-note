@@ -1,0 +1,53 @@
+---
+const {title} = Astro.props;
+---
+
+<style lang="scss">
+    .pageHeader {
+        margin-bottom: 60px;
+        padding: 8px;
+        background-color: #ffffff;
+        border-radius: 8px;
+
+        &__container {
+
+            padding: 4px 0;
+            border-style: solid;
+            border-width: 12px 0;
+            border-color: #FFE11D;
+            background-color: #ffffff;
+            text-align: center;
+
+            h1 {
+                font-size: 36px;
+                font-weight: bold;
+                color: #ff4697;
+                display: inline-block;
+                position: relative;
+                margin: 0 auto;
+
+                &:before,
+                &:after {
+                    font-family: 'Material Icons';
+                    content: '\e87e';
+                    position: absolute;
+                }
+
+                &:before {
+                    left: -45px;
+                    top: 8px;
+                }
+                &:after {
+                    right: -45px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+</style>
+
+<div class="pageHeader">
+    <div class="pageHeader__container">
+        <h1>{title}</h1>
+    </div>
+</div>

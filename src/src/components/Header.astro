@@ -2,24 +2,31 @@
 const path = Astro.site.pathname;
 ---
 <style lang="scss">
-    header {
+    .header {
         width: 100%;
         position: fixed;
         top: 0;
         z-index: 999;
         
-        .container {
+        &__container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 16px;
+            padding: 0;
             max-width: 1000px;  
             margin: 0 auto;
             height: 70px;
 
             a {
                 text-decoration: none;
-            
+
+                &:hover {
+                    opacity: 0.7;
+                    transition: opacity 0.15s;
+                }
+            }
+
+            &__title {
                 h1 {
                     font-size: 24px;
                     font-weight: 900;
@@ -33,18 +40,24 @@ const path = Astro.site.pathname;
                         font-size: 13.6px;
                     }
                 }
+            }
 
-            }            
+            &__links {
+                a {
+                    margin-left: 16px;
+                    color: #333333;
+                }
+            }
         }
     }
 </style>
 
-<header>
-    <div class="container">
-        <a href="/">
+<header class="header">
+    <div class="header__container">
+        <a href="/" class="header__container__title">
             <h1>📖 みっちゃんノート<span>矢久保美緒さん非公式ファンサイト</span></h1>
         </a>
-        <div>
+        <div class="header__container__links">
             <a href="/">ホーム</a>
             <a href="/profile">プロフィール</a>
             <a href="/works">作品･仕事</a>

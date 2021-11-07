@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 let title = 'ニュース';
 
 interface MarkdownFrontmatter {
@@ -34,6 +35,7 @@ newsPosts = newsPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Dat
 </style>
 
 <BaseLayout title={title}>
+	<PageHeader title={title} />
     {newsPosts.map((post) => (
     <a href={post.url} class="newsList">
         <h3 class="newsList__title">{post.title}</h3>
