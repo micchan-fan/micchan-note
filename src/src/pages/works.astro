@@ -4,8 +4,11 @@ import PageHeader from '../components/PageHeader.astro';
 import MiddleHeader from '../components/MiddleHeader.astro';
 import MvCard from '../components/MvCard.astro';
 import DiscCard from '../components/DiscCard.astro';
+import DramaCard from '../components/DramaCard.astro';
+
 import mv from '../contents/works/mv.json';
 import discography from '../contents/works/discography.json';
+import drama from '../contents/works/drama.json';
 
 let title = '作品';
 
@@ -44,14 +47,28 @@ let title = '作品';
 		}
 	}
 
+	.drama {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+
+			&__hiddenBox {
+				display: block;
+				content: '';
+				max-width: 484px;
+				width: calc(50% - 8px);
+			}
+		}
+	}
+
 </style>
 
 <BaseLayout title={title}>
 	<PageHeader title={title} />
 
-
-
-	<div class="discography" style="margin-top:500px;">
+	<div class="discography">
 		<MiddleHeader title="ディスコグラフィー" />
 		<div class="discography__container">
 			{discography.map((item)=>(<DiscCard data={item} />))}
@@ -64,6 +81,14 @@ let title = '作品';
 		<div class="mv__container">
 			{mv.map((item)=>(<MvCard data={item} />))}
 			<div class="mv__container__hiddenBox"></div>
+		</div>
+	</div>
+	
+	<div class="drama">
+		<MiddleHeader title="ドラマ" />
+		<div class="drama__container">
+			{drama.map((item)=>(<DramaCard data={item} />))}
+			<div class="drama__container__hiddenBox"></div>
 		</div>
 	</div>
 	
