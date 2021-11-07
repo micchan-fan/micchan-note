@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import MiddleHeader from '../components/MiddleHeader.astro';
 import ProfilePic from '../components/ProfilePic.astro';
-import Button from '../components/Button.astro';
-let title = 'ホーム';
+let title = 'プロフィール';
 
 ---
 
@@ -41,9 +42,50 @@ let title = 'ホーム';
 			}
 		}
 	}
+
+	.officialProfile {
+		margin-bottom: 36px;
+
+		table {
+			margin: 0 auto;
+
+			tbody tr th {
+				min-width: 100px;
+			}
+		}
+	}
+
+	.history {
+		margin-bottom: 36px;
+
+		ul li {
+			margin-bottom: 16px;
+			position: relative;
+
+			sup {
+				font-size: 12px;
+				display: inline-block;
+				margin-left: 4px;
+			}
+		}
+
+	}
+
+	.footnote {
+		margin-bottom: 36px;
+		ul {
+			padding-left: 0;
+
+			li {
+				list-style: none;
+				font-size: 16px;
+			}
+		}
+	}
 </style>
 
 <BaseLayout title={title}>
+	<PageHeader title={title} />
 	<div class="profile">
 		<div class="profile__picture">
 			<ProfilePic />
@@ -51,7 +93,134 @@ let title = 'ホーム';
 		<div class="profile__intro">
 			<h2><ruby>矢久保<rt>やくぼ</rt><ruby>美緒<rt>みお</rt></ruby> <span>さん</span></h2>
 			<p>乃木坂46 4期生。2018年8月19日に坂道合同オーディションに合格、11月29日に乃木坂46へ配属。現在は、アンダーメンバーとして活動する傍ら、FM FUJI「タイムちゃん」のレギュラーパーソナリティなどを務める。</p>
-			<Button link="aaaa" text="詳しいプロフィール" />
 		</div>
 	</div>
+
+	<div class="officialProfile">
+		<MiddleHeader title="公式プロフィール" />
+		<table>
+			<tbody>
+				<tr>
+					<th>血液型</th>
+					<td>B型</td>
+				</tr>
+				<tr>
+					<th>星座</th>
+					<td>しし座</td>
+				</tr>
+				<tr>
+					<th>身長</th>
+					<td>153cm</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="history">
+		<MiddleHeader title="沿革" />
+
+		<ul>
+			<li>
+				2018年8月19日に坂道合同オーディションに合格<sup><a href="#footnote_1">[1]</a></sup>。
+				倍率は3400倍だった<sup><a href="#footnote_2">[2]</a></sup>。
+			</li>
+			<li>
+				2018年11月29日に配属が決定されたことが発表<sup><a href="#footnote_3">[3]</a></sup>。
+			</li>
+			<li>
+				2018年12月1日に乃木坂46公式サイトで配属が発表<sup><a href="#footnote_4">[4]</a></sup>。
+			</li>
+			<li>
+				2018年12月3日に「乃木坂46 4期生お見立て会」で初お披露目された<sup><a href="#footnote_5">[5]</a></sup>。
+			</li>
+			<li>
+				2019年2月21日から24日まで開催れた「乃木坂46　7th　YEAR　BIRTHDAY　LIVE」で初めて全体ライブへの参加を果たした<sup><a href="#footnote_6">[6]</a></sup>。
+			</li>
+			<li>
+				2019年3月27日に「３人のプリンシパル」で4期生初公演に挑むことが発表された<sup><a href="#footnote_7">[7]</a></sup>。
+			</li>
+			<li>
+				2019年4月21日に「Sing Out！」発売記念ライブの一環として、初となる「４期生ライブ」が開催・出演することが発表された<sup><a href="#footnote_8">[8]</a></sup>。
+			</li>
+			<li>
+				2020年2月22日に初となる映像作品（「サムのこと」「猿に会う」）への出演が発表された<sup><a href="#footnote_9">[9]</a></sup>。
+			</li>
+			<li>
+				2021年3月16日にFM FUJI「タイムちゃん」にレギュラー出演することが発表された<sup><a href="#footnote_10">[10]</a></sup>。
+			</li>
+			<li>
+				2021年7月15日発売の「EX大衆」から、「さゆりんご軍団妄想ノート」を引き継ぐ形で「乃木坂の星」の連載を同期の佐藤璃果と開始した<sup><a href="#footnote_11">[11]</a></sup><sup><a href="#footnote_12">[12]</a></sup>。
+			</li>
+			<li>
+				2021年8月27日に、卒業した松村沙友理の後を注ぐ形で、ニコニコ生放送「生のアイドルが好き」の新MCに就任することが発表された<sup><a href="#footnote_13">[13]</a></sup>。
+			</li>
+		</ul>
+	</div>
+
+	<!-- Todo: 好きなもの的な何か-->
+
+	<!-- Todo: タイムちゃんの話をまとめる-->
+	<!-- Todo: タイムちゃんは別ページにしたい-->
+
+	<!-- Todo: モバメの集計データ-->
+
+	<div class="footnote">
+		<MiddleHeader title="脚注･出典" />
+		<ul>
+			<!-- Todo: 配列にする-->
+			<!-- Todo: クリック時にハイライトさせる-->
+			<li id="footnote_1">
+				[1] 合格後にSHOWROOMを配信したことから。明確なソースは不明。
+			</li>
+			<li id="footnote_2">
+				[2] <a href="https://www.nikkansports.com/entertainment/news/201808190000694.html">坂道合同オーディション38人合格　倍率3400倍</a>
+				, 日刊スポーツ (2018年8月19日), 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_3">
+				[3] <a href="https://www.nogizaka46.com/smph/news/2018/11/post-12707.php">坂道合同オーディショングループ配属決定のお知らせ</a>
+				, 乃木坂46公式サイト, 乃木坂46LLC, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_4">
+				[4] <a href="https://www.nogizaka46.com/news/2018/12/46-4291802.php">乃木坂46四期生、新メンバー第２弾公開！</a>
+				, 乃木坂46公式サイト, 乃木坂46LLC, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_5">
+				[5] <a href="https://mdpr.jp/music/detail/1808208">乃木坂46・4期生、初お披露目「制服のマネキン」「インフルエンサー」…涙と緊張のステージに1万人熱狂＜お見立て会詳細レポ／プロフィール＞</a>
+				, モデルプレス, 株式会社ネットネイティブ, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_6">
+				[6] <a href="https://www.nikkansports.com/entertainment/news/201902210001181.html">乃木坂４期生の早川聖来ら11人が初パフォーマンス</a>
+				, 日刊スポーツ (2019年2月22日), 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_7">
+				[7] <a href="https://www.nogizaka46.com/news/2019/03/464-3.php">乃木坂46　4期生初公演 「３人のプリンシパル」開催決定＆モバイル先行開始！</a>
+				, 乃木坂46公式サイト, 乃木坂46LLC, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_8">
+				[8] <a href="https://www.nogizaka46.com/news/2019/04/46-23rdsing-out.php">乃木坂46 23rdシングル「Sing Out！」発売記念ライブ モバイル会員先行受付スタート！</a>
+				, 乃木坂46公式サイト, 乃木坂46LLC, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_9">
+				[9] <a href="https://www.nogizaka46.com/news/2020/02/46-411dtv.php">乃木坂46 4期生総勢11名、dTVでドラマ初出演決定！</a>
+				, 乃木坂46公式サイト, 乃木坂46LLC, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_10">
+				[10] <a href="https://www.nogizaka46.com/news/2021/03/fm-fuji-2.php">矢久保美緒が、FM FUJI「タイムちゃん」の毎週火曜日にレギュラー出演決定！</a>
+				, 乃木坂46公式サイト, 乃木坂46LLC, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_11">
+				[11] <a href="https://blog.nogizaka46.com/rika.satou/smph/2021/07/062561.php">乃木坂の星。</a>
+				, 佐藤璃果 OFFICIAL BLOG (乃木坂46公式サイト), 乃木坂46LLC, 2021年11月7日閲覧。
+			</li>
+			<li id="footnote_12">
+				[12] EX大衆 2021年8月号, 双葉社, 2021年7月15日, ASIN: B095T1CD83。（注：巻内に明確に「さゆりんご軍団妄想ノート」を引き継いで、とは明記されていない。）
+			</li>
+			<li id="footnote_13">
+				[13] <a href="https://twitter.com/namaidol/status/1434123708642127872?s=20">「生のアイドルが好き」公式ツイッター。</a>
+				, Twitter, 2021年11月7日閲覧。（注：2021年8月27日の配信の内容は記事化されていないため、明確なソースは不明。）
+			</li>
+		</ul>
+	
+	</div>
+
 </BaseLayout>
