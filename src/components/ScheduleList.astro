@@ -3,7 +3,7 @@ interface MarkdownFrontmatter {
     schedule: number;
 }
 let schedules = Astro.fetchContent<MarkdownFrontmatter>('../contents/schedules/*.md');
-schedules = schedules.sort((a, b) => new Date(b.schedule).valueOf() - new Date(a.schedule).valueOf());
+schedules = schedules.sort((a, b) => new Date(a.schedule).valueOf() - new Date(b.schedule).valueOf());
 ---
 
 <style lang="scss">
