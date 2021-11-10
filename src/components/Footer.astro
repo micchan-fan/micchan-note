@@ -17,8 +17,14 @@
             margin: 0 auto;
             border-bottom: 1px solid #efefef;
 
-            &__row {
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
 
+            &__row {
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 24px;
+                }
 
                 &__header {
                     font-weight: bold;

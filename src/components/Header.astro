@@ -1,12 +1,25 @@
 ---
 const path = Astro.site.pathname;
 ---
+<script>
+
+function menuButton(){
+	const menu = document.getElementById("menuContent");
+
+	if (menu.style.display=="flex") {
+		menu.style.display ="none";
+	} else {
+		menu.style.display ="flex";
+	}
+}
+</script>
 <style lang="scss">
     .header {
         width: 100%;
         position: fixed;
         top: 0;
         z-index: 999;
+        padding: 0 16px;
         
         &__container {
             display: flex;
@@ -43,9 +56,50 @@ const path = Astro.site.pathname;
             }
 
             &__links {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                    position: absolute;
+                    background-color: #ffffff;
+                    flex-direction: column;
+                    top: 76px;
+                    left: 16px;
+                    width: calc(100% - 32px);
+                    padding: 0 16px;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px 20px rgb(0 0 0 / 20%);
+                }
+
                 a {
-                    margin-left: 16px;
+                    margin: 0 0 0 16px;
                     color: #333333;
+
+                    @media screen and (max-width: 768px) {
+                        font-weight: bold;
+                        line-height: 2em;
+                        padding: 12px 0;
+                        margin: 0;
+                        font-size: 16px;
+                        border-style: solid;
+                        border-color: #efefef;
+                        border-width: 0 0 1px 0;
+
+                        &:last-child {
+                            border-width: 0;
+                        }
+                    }
+                }
+            }
+            &__menuButton {
+                display: none;
+                padding: 6px 12px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                font-weight: bold;
+                border: 2px solid #e84e91;
+                color: #e84e91;
+
+                @media screen and (max-width: 768px) {
+                    display: block
                 }
             }
         }
@@ -57,13 +111,16 @@ const path = Astro.site.pathname;
         <a href="/" class="header__container__title">
             <h1>📖 みっちゃんノート<span>矢久保美緒さん非公式ファンサイト</span></h1>
         </a>
-        <div class="header__container__links">
+        <div class="header__container__links" id="menuContent">
             <a href="/">ホーム</a>
             <a href="/profile">プロフィール</a>
             <a href="/works">作品</a>
             <a href="/schedules">スケジュール</a>
             <a href="/news">ニュース</a>
             <a href="/about">このサイトについて</a>
+        </div>
+        <div class="header__container__menuButton" id="menuButton" onclick="menuButton()">
+            メニュー
         </div>
     </div>
 </header>

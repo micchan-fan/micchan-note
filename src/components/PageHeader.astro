@@ -10,6 +10,10 @@ const {marginBottom} = Astro.props;
         background-color: #ffffff;
         border-radius: 8px;
 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 24px!important;
+        }
+
         &__container {
 
             padding: 4px 0;
@@ -27,6 +31,10 @@ const {marginBottom} = Astro.props;
                 position: relative;
                 margin: 0 auto;
 
+                @media screen and (max-width: 768px) {
+                    font-size: 28px;
+                }
+
                 &:before,
                 &:after {
                     font-family: 'Material Icons';
@@ -37,10 +45,18 @@ const {marginBottom} = Astro.props;
                 &:before {
                     left: -45px;
                     top: 8px;
+
+                    @media screen and (max-width: 768px) {
+                        left: -36px;
+                    }
                 }
                 &:after {
                     right: -45px;
                     top: 8px;
+
+                    @media screen and (max-width: 768px) {
+                        right: -36px;
+                    }
                 }
             }
         }

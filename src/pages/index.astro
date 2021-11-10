@@ -22,7 +22,11 @@ let title = 'ホーム';
 
 		position: relative;
 		
-		margin-bottom: 60px; 
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 
 		&__overlay {
 			position: absolute;
@@ -44,6 +48,7 @@ let title = 'ホーム';
 			right: 4px;
 			z-index: 10;
 			text-shadow: 0 0px 10px #000000;
+			width: calc(100% - 8px);
 		}
 	}
 
@@ -51,17 +56,31 @@ let title = 'ホーム';
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 16px;
 		margin-bottom: 84px;
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			margin-bottom: 60px;
+		}
 
 		&__picture {
 			width: 25%;
 			max-width: 200px;
+
+			@media screen and (max-width: 768px) {
+				width: 100%;
+				margin-bottom: 24px;
+			}
 		}
 
 		&__intro {
 			width: 75%;
 			padding-left: 24px;
+
+			@media screen and (max-width: 768px) {
+				width: 100%;
+				padding-left: 0;
+			}
 
 			h2 {
 				font-size: 36px;
@@ -88,6 +107,10 @@ let title = 'ホーム';
 		justify-content: space-between;
 		margin-bottom: 60px;
 
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
+
 		&__container {
 			width: calc(50% - 16px);
 			background-color: #ffffff;
@@ -96,11 +119,23 @@ let title = 'ホーム';
 			position: relative;
 			overflow: hidden;
 
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
+
 			&:first-child {
-				margin-right: 8px;
+				margin: 0 8px 0 0;
+				
+				@media screen and (max-width: 768px) {
+					margin: 0 0 36px 0;
+				}
 			}
 			&:last-child {
 				margin-left: 8px;
+				
+				@media screen and (max-width: 768px) {
+					margin-left: 0;
+				}
 			}
 			&__title {
 				margin-bottom: 8px;
@@ -127,6 +162,10 @@ let title = 'ホーム';
 			padding: 16px;
 			border: double #000000;
 		}
+	}
+
+	@media screen and (max-width: 1032px) {
+		
 	}
 </style>
 

@@ -32,6 +32,10 @@ let title = '作品';
 			align-content: center;
 			padding: 0;
 
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+
 			li {
 				list-style: none;
 				width: 25%;
@@ -39,8 +43,17 @@ let title = '作品';
 				border-color: #efefef;
 				border-width: 0 1px 0 0;
 
+				@media screen and (max-width: 768px) {
+					border-width: 0 0 1px 0;
+					width: 100%;
+				}
+
 				&:last-child {
 					border-right: 0;
+
+					@media screen and (max-width: 768px) {
+						border-bottom: 0;
+					}
 				}
 
 				a {
@@ -70,11 +83,19 @@ let title = '作品';
 			align-items: flex-start;
 			flex-wrap: wrap;
 
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+
 			&__hiddenBox {
 				display: block;
 				content: '';
 				max-width: 301.33px;
 				width: calc(33.33% - 16px);
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -86,11 +107,19 @@ let title = '作品';
 			align-items: flex-start;
 			flex-wrap: wrap;
 
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+
 			&__hiddenBox {
 				display: block;
 				content: '';
 				max-width: 484px;
 				width: calc(50% - 8px);
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -116,11 +145,19 @@ let title = '作品';
 			align-items: flex-start;
 			flex-wrap: wrap;
 
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+
 			&__hiddenBox {
 				display: block;
 				content: '';
 				max-width: 484px;
 				width: calc(50% - 8px);
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
 			}
 		}
 	}

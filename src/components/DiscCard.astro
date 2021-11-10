@@ -8,6 +8,12 @@ const {data} = Astro.props;
         max-width: 301.33px;
         width: calc(33.33% - 16px);
         margin-bottom: 36px;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 24px;
+            width: 100%;
+            max-width: unset;
+        }
     
         &__header {
             width: 100%;
