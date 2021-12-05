@@ -3,6 +3,11 @@ interface MarkdownFrontmatter {
     schedule: number;
 }
 let schedules = Astro.fetchContent<MarkdownFrontmatter>('../contents/schedules/*.md');
+schedules = schedules.filter(a => {
+  const date = new Date(a.schedule).valueOf();
+  const daytoday = Date.now();
+  return (date >= daytoday);
+});
 schedules = schedules.sort((a, b) => new Date(a.schedule).valueOf() - new Date(b.schedule).valueOf());
 ---
 
