@@ -114,11 +114,6 @@ let title = 'ホーム';
 
 		&__container {
 			width: calc(50% - 16px);
-			background-color: #ffffff;
-			padding: 16px;
-			border-radius: 8px;
-			position: relative;
-			overflow: hidden;
 
 			@media screen and (max-width: 768px) {
 				width: 100%;
@@ -138,20 +133,19 @@ let title = 'ホーム';
 					margin-left: 0;
 				}
 			}
-			&__title {
+		}
+	}
+
+	.mobilemail {
+		margin-bottom: 60px;
+
+		&__main {	
+			p {
 				margin-bottom: 8px;
 			}
-			&__bgTitle {
-				position: absolute;
-				top: -12px;
-				right: 0px;
-				font-size: 80px;
-				font-family: "Caveat", cursive;
-				color: rgb(255 225 29 / 30%);
-				line-height: 1em;
-			}
-			&__main {
-				margin-bottom: 8px;
+			img {
+				width: 100%;
+				height: auto;
 			}
 		}
 	}
@@ -165,9 +159,30 @@ let title = 'ホーム';
 		}
 	}
 
-	@media screen and (max-width: 1032px) {
-		
+	.widget {
+		background-color: #ffffff;
+		padding: 16px;
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+
+		&__title {
+			margin-bottom: 8px;
+		}
+		&__bgTitle {
+			position: absolute;
+			top: -12px;
+			right: 0px;
+			font-size: 80px;
+			font-family: "Caveat", cursive;
+			color: rgb(255 225 29 / 30%);
+			line-height: 1em;
+		}
+		&__main {
+			margin-bottom: 8px;
+		}
 	}
+
 </style>
 
 <BaseLayout title={title}>
@@ -189,23 +204,35 @@ let title = 'ホーム';
 	</div>
 
 	<div class="updates">
-		<div class="updates__container">
-			<h2 class="updates__container__title">スケジュール</h2>
-			<span class="updates__container__bgTitle">Schedule</span>
-			<div class="updates__container__main">
+		<div class="updates__container widget">
+			<h2 class="updates__container__title widget__title">スケジュール</h2>
+			<span class="updates__container__bgTitle widget__bgTitle">Schedule</span>
+			<div class="updates__container__main widget__main">
 				<ScheduleList />
 			</div>
 			<Button link="schedules" text="もっとみる" />
 		</div>
 
-		<div class="updates__container">
-			<h2 class="updates__container__title">ニュース</h2>
-			<span class="updates__container__bgTitle">News</span>
-			<div class="updates__container__main">
+		<div class="updates__container widget">
+			<h2 class="updates__container__title widget__title">ニュース</h2>
+			<span class="updates__container__bgTitle widget__bgTitle">News</span>
+			<div class="updates__container__main widget__main">
 				<NewsList />
 			</div>
 			<Button link="news" text="もっとみる" />
 		</div>
+	</div>
+
+	<div class="mobilemail widget">
+		<h2 class="widget__title">モバイルメール</h2>
+		<span class="widget__bgTitle">Mobile Mail</span>
+		<div class="mobilemail__main widget__main">
+			<p>#miomail (矢久保美緒さんのモバイルメール) の受信状況を表しています。<br />モバイルメールの受信を検討されている方はぜひご参考までに。</p>
+			<a href="https://pixe.la/v1/users/micchan-fan/graphs/mobilemail.html" target="_brank" rel="noopener">
+				<img src="https://pixe.la/v1/users/micchan-fan/graphs/mobilemail" alt="モバイルメールの受信状況グラフ">
+			</a>
+		</div>
+		<Button link="https://pixe.la/v1/users/micchan-fan/graphs/mobilemail.html" text="詳細な統計を見る(外部サイト)" openInNewWindow=true />
 	</div>
 
 </BaseLayout>
