@@ -395,5 +395,24 @@
         "nogiDogaId": "",
         "asin": "",
         "youtubeId": ""
+    },
+    {
+        "title": "乃木坂46 10th YEAR BIRTHDAY LIVE",
+        "startDate": "2022-03-26",
+        "endDate": "2022-03-27",
+        "location": {
+            "name": "日産スタジアム",
+            "latitude": "35.5099461",
+            "longitude": "139.6041997"
+        },
+        "production": "ライブエグザム",
+        "operation": "キョードー横浜／ソーゴー東京",
+        "sponsored": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/10th_birthday_live/",
+        "type": "有観客配信",
+        "nogiDogaId": "",
+        "asin": "",
+        "youtubeId": ""
     }
 ]
