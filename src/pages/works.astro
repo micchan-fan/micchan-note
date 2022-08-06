@@ -210,27 +210,27 @@ let title = '作品';
 					<p>
 						於: <a href={"https://www.google.com/maps/search/" + item.location.latitude + "," + item.location.longitude}>{item.location.name}</a>
 					</p>
-					{item.production &&
+					{item.production != null &&
 						<p>制作: {item.production}</p>
 					}
-					{item.operation &&
+					{item.operation != null &&
 						<p>運営: {item.operation}</p>
 					}
-					{item.supporter &&
+					{item.supporter  != null &&
 						<p>サポート: {item.supporter}</p>
 					}
-					{item.website &&
+					{item.website  != null &&
 						<p>
 							<a href={item.website}>ライブ公式ウェブサイト</a>
 						</p>
 					}
-					{item.type &&
+					{item.type  != null &&
 						<p>開催形態: {item.type}</p>
 					}
 					<div class="live__links">
-						{item.nogiDogaId && <Button text="のぎ動画で見る" link={"https://nogidoga.com/episode/" + item.nogiDogaId} /> }
-						{item.asin && <Button text="購入する" link={"https://www.amazon.co.jp/s?k=" + item.asin} /> }
-						{item.youtubeId && <Button text="YouTubeで見る" link={"https://www.youtube.com/watch?v=" + item.youtubeId} /> }
+						{item.nogiDogaId != null && <Button text="のぎ動画で見る" link={"https://nogidoga.com/episode/" + item.nogiDogaId} /> }
+						{item.asin != null && <Button text="購入する" link={"https://www.amazon.co.jp/s?k=" + item.asin} /> }
+						{item.youtubeId != null && <Button text="YouTubeで見る" link={"https://www.youtube.com/watch?v=" + item.youtubeId} /> }
 					</div>
 				</AccordionItem>
 			))}
