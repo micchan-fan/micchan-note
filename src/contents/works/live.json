@@ -8,14 +8,15 @@
             "latitude": "35.5122721",
             "longitude": "139.617991"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
         "nogiDogaId": "1102",
-        "asin": "",
-        "youtubeId": ""
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "真夏の全国ツアー2019 (愛知公演)",
@@ -26,14 +27,15 @@
             "latitude": "35.1860075",
             "longitude": "136.9452112"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "真夏の全国ツアー2019 (福岡公演)",
@@ -44,14 +46,15 @@
             "latitude": "33.5929796",
             "longitude": "130.3593403"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "真夏の全国ツアー2019 (大阪公演)",
@@ -62,14 +65,15 @@
             "latitude": "34.6692804",
             "longitude": "135.473954"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "真夏の全国ツアー2019 (東京公演)",
@@ -80,14 +84,15 @@
             "latitude": "35.6742569",
             "longitude": "139.7147648"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
         "nogiDogaId": "1160",
-        "asin": "",
-        "youtubeId": ""
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "乃木坂46 3・4期生ライブ",
@@ -98,14 +103,15 @@
             "latitude": "35.6676472",
             "longitude": "139.6979571"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
         "nogiDogaId": "751",
-        "asin": "",
-        "youtubeId": ""
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "乃木坂46 8th YEAR BIRTHDAY LIVE",
@@ -116,14 +122,15 @@
             "latitude": "35.1860075",
             "longitude": "136.9452112"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客／最終日のみLV有",
-        "nogiDogaId": "",
+        "nogiDogaId": null,
         "asin": "B08N3GGQP7",
-        "youtubeId": ""
+        "youtubeId": null
     },
     {
         "title": "NOGIZAKA46 Mai Shiraishi Graduation Concert 〜Always beside you〜",
@@ -131,17 +138,18 @@
         "endDate": "2020-10-28",
         "location": {
             "name": "非公表",
-            "latitude": "",
-            "longitude": ""
+            "latitude": null,
+            "longitude": null
         },
         "production": "ライブエグザム",
         "operation": "ソーゴー東京",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/shiraishimai_graduationconcert/",
         "type": "無観客配信",
-        "nogiDogaId": "",
+        "nogiDogaId": null,
         "asin": "B08W25PQPV",
-        "youtubeId": ""
+        "youtubeId": null
     },
     {
         "title": "乃木坂46 4期生ライブ 2020",
@@ -149,15 +157,16 @@
         "endDate": "2020-12-06",
         "location": {
             "name": "非公表",
-            "latitude": "",
-            "longitude": ""
+            "latitude": null,
+            "longitude": null
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "無観客配信",
-        "nogiDogaId": "",
+        "nogiDogaId": null,
         "asin": "B08W25PQPV",
         "youtubeId": "4eO9bd8114A"
     },
@@ -172,11 +181,12 @@
         },
         "production": "ライブエグザム",
         "operation": "ソーゴー東京",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/9thyear_birthday_live/",
         "type": "無観客配信",
-        "nogiDogaId": "",
-        "asin": "",
+        "nogiDogaId": null,
+        "asin": null,
         "youtubeId": "u25yBFm3wB0"
     },
     {
@@ -190,11 +200,12 @@
         },
         "production": "ライブエグザム",
         "operation": "ソーゴー東京",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/9thyear_birthday_live/",
         "type": "無観客配信",
-        "nogiDogaId": "",
-        "asin": "",
+        "nogiDogaId": null,
+        "asin": null,
         "youtubeId": "EjsXi6gDEKc"
     },
     {
@@ -208,11 +219,12 @@
         },
         "production": "ライブエグザム",
         "operation": "ソーゴー東京",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/9thyear_birthday_live/",
         "type": "有観客配信",
-        "nogiDogaId": "",
-        "asin": "",
+        "nogiDogaId": null,
+        "asin": null,
         "youtubeId": "5uxUaS2tmgM"
     },
     {
@@ -226,11 +238,12 @@
         },
         "production": "ライブエグザム",
         "operation": "ソーゴー東京",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/smph/sayuringo_live/",
         "type": "有観客配信",
-        "nogiDogaId": "",
-        "asin": "",
+        "nogiDogaId": null,
+        "asin": null,
         "youtubeId": "CE7dH7so4EU"
     },
     {
@@ -242,14 +255,15 @@
             "latitude": "34.6896386",
             "longitude": "135.527913"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "真夏の全国ツアー2021 (宮城公演)",
@@ -260,14 +274,15 @@
             "latitude": "38.3375288",
             "longitude": "140.9509479"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "真夏の全国ツアー2021 (愛知公演)",
@@ -278,14 +293,15 @@
             "latitude": "35.0957877",
             "longitude": "136.9214207"
         },
-        "production": "",
-        "operation": "",
-        "supporter": "",
-        "website": "",
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
         "type": "有観客",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "真夏の全国ツアー2021 (福岡公演) - 乃木坂46結成10周年記念セレモニー",
@@ -298,11 +314,12 @@
         },
         "production": "ライブエグザム",
         "operation": "キョードー西日本",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/tour_2021/",
         "type": "有観客配信",
-        "nogiDogaId": "",
-        "asin": "",
+        "nogiDogaId": null,
+        "asin": null,
         "youtubeId": "3Gg3CHqudfo"
     },
     {
@@ -316,11 +333,12 @@
         },
         "production": "ライブエグザム",
         "operation": "キョードー西日本",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/tour_2021/",
         "type": "有観客配信",
-        "nogiDogaId": "",
-        "asin": "",
+        "nogiDogaId": null,
+        "asin": null,
         "youtubeId": "41Z_MbjUww4"
     },
     {
@@ -334,12 +352,13 @@
         },
         "production": "ライブエグザム",
         "operation": "ライブエグザム",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/28th_underlive_2021/",
         "type": "有観客配信 (配信は最終日のみ)",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "乃木坂46真夏の全国ツアー2021 FINAL!",
@@ -352,12 +371,13 @@
         },
         "production": "ライブエグザム",
         "operation": "ソーゴー東京",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/tour2021_final/",
         "type": "有観客配信",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "乃木坂46 北野日奈子 卒業コンサート",
@@ -370,12 +390,13 @@
         },
         "production": "ライブエグザム",
         "operation": "ライブエグザム",
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/s/n46/page/kitano_grad_29thsgul/",
         "type": "有観客配信",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "乃木坂46 29thSG アンダーライブ",
@@ -388,13 +409,13 @@
         },
         "production": "ライブエグザム",
         "operation": "ライブエグザム",
-        "sponsored": "NTT docomo (3/26のみ)",
+        "sponsor": "NTT docomo (3/26のみ)",
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/s/n46/page/kitano_grad_29thsgul/",
         "type": "有観客配信 (3/26はdTV独占配信)",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     },
     {
         "title": "乃木坂46 10th YEAR BIRTHDAY LIVE",
@@ -407,12 +428,12 @@
         },
         "production": "ライブエグザム",
         "operation": "キョードー横浜／ソーゴー東京",
-        "sponsored": null,
+        "sponsor": null,
         "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
         "website": "https://www.nogizaka46.com/s/n46/page/10th_birthday_live/",
         "type": "有観客配信",
-        "nogiDogaId": "",
-        "asin": "",
-        "youtubeId": ""
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
