@@ -1,5 +1,6 @@
 ---
 import Button from '../components/Button.astro';
+import DiscUnreleased from '../components/DiscUnreleased.astro';
 const {data} = Astro.props;
 ---
 
@@ -25,6 +26,24 @@ const {data} = Astro.props;
             > iframe {
                 width: 100%;
                 height: 250px;
+            }
+
+            &__unreleased {
+                height: 100%;
+                width: 100%;
+                background-color: #e84e91;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+
+                &__icon::before {
+                    font-family: 'Material Icons';
+                    content: '\e88e';
+                    font-size: 36px;
+                }
             }
         }
 
@@ -63,7 +82,11 @@ const {data} = Astro.props;
 
 <article class="discCard">
         <div class="discCard__header">
-            <iframe src={"https://open.spotify.com/embed/track/" + data.spotifyId} frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            {
+                data.spotifyId != null ?
+                <iframe src={"https://open.spotify.com/embed/track/" + data.spotifyId} frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> :
+                <div class="discCard__header__unreleased"><span class="discCard__header__unreleased__icon"></span>この楽曲は未配信です</div>
+            }
         </div>
         <div class="discCard__body">
             <h3>{data.title}</h3>
@@ -74,6 +97,6 @@ const {data} = Astro.props;
             </div>
         </div>
         <div class="discCard__footer">
-            <p>作詞: <span>{data.songwriter}</span>／作曲: <span>{data.composer}</span>／編曲: <span>{data.arranger}</span>／シングル: <span>{data.singleTitle} ({data.singleType})</span>／リリース: <span>{data.release}</span>／楽曲種別: <span>{data.type}</span>／ポジション: <span>{data.position}</span></p>
+            <p>作詞: <span>{data.songwriter != null ? data.songwriter : <DiscUnreleased />}</span>／作曲: <span>{data.composer != null ? data.composer : <DiscUnreleased />}</span>／編曲: <span>{data.arranger != null ? data.arranger : <DiscUnreleased />}</span>／シングル: <span>{data.singleTitle != null ? data.singleTitle : <DiscUnreleased />} ({data.singleType != null ? data.singleType : <DiscUnreleased />})</span>／リリース: <span>{data.release != null ? data.release : <DiscUnreleased />}</span>／楽曲種別: <span>{data.type != null ? data.type : <DiscUnreleased />}</span>／ポジション: <span>{data.position != null ? data.position : <DiscUnreleased />}</span></p>
         </div>
 </article>

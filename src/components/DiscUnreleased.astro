@@ -1,0 +1,55 @@
+---
+---
+<style lang="scss">
+    .container {
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            font-family: 'Material Icons';
+            content: '\e88e';
+            position: absolute;
+            top: 3px;
+        }
+        &__text {
+            padding-left: 14px;
+        }
+        &__tooltip {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -32px;
+            display: inline-block;
+            padding: 6px;
+            white-space: nowrap;
+            font-size: 10px;
+            line-height: 1.3;
+            background: #333333;
+            color: #fff;
+            border-radius: 3px;
+            transition: 0.3s ease-in;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -13px;
+                left: 50%;
+                margin-left: -7px;
+                border: 7px solid transparent;
+                border-bottom: 7px solid #333;
+            }
+        }
+        &:hover &__tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+</style>
+
+<span class="container">
+    <span class="container__text">未公開</span>
+    <span class="container__tooltip">この情報は未公開のため、記載されていません。</span>
+</span>
