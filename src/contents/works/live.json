@@ -358,5 +358,23 @@
         "nogiDogaId": "",
         "asin": "",
         "youtubeId": ""
+    },
+    {
+        "title": "乃木坂46 北野日奈子 卒業コンサート",
+        "startDate": "2022-03-24",
+        "endDate": "2022-03-24",
+        "location": {
+            "name": "ぴあアリーナMM",
+            "latitude": "35.4558788",
+            "longitude": "139.6287176"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/kitano_grad_29thsgul/",
+        "type": "有観客配信",
+        "nogiDogaId": "",
+        "asin": "",
+        "youtubeId": ""
     }
 ]
