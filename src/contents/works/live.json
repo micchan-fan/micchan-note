@@ -376,5 +376,24 @@
         "nogiDogaId": "",
         "asin": "",
         "youtubeId": ""
+    },
+    {
+        "title": "乃木坂46 29thSG アンダーライブ",
+        "startDate": "2022-03-26",
+        "endDate": "2022-03-27",
+        "location": {
+            "name": "ぴあアリーナMM",
+            "latitude": "35.4558788",
+            "longitude": "139.6287176"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsored": "NTT docomo (3/26のみ)",
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/kitano_grad_29thsgul/",
+        "type": "有観客配信 (3/26はdTV独占配信)",
+        "nogiDogaId": "",
+        "asin": "",
+        "youtubeId": ""
     }
 ]
