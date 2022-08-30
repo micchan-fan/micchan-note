@@ -1,5 +1,6 @@
 ---
 import Button from '../components/Button.astro';
+import UnreleasedTip from '../components/UnreleasedTip.astro';
 const {data} = Astro.props;
 ---
 
@@ -18,7 +19,6 @@ const {data} = Astro.props;
         &__header {
             position: relative;
             width: 100%;
-            overflow: hidden;
             border-radius: 8px 8px 0 0;
             background-color: #efefef;
 
@@ -31,6 +31,7 @@ const {data} = Astro.props;
                 width: 100%;
                 height: auto;
                 position: absolute;
+                border-radius: 8px 8px 0 0;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -82,7 +83,7 @@ const {data} = Astro.props;
     <!-- Todo: YouTubeがないケースを想定していないので、propertyを用意する-->
         <div class="mvCard__header">
             <iframe src={"https://www.youtube.com/embed/" + data.youtubeId} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-            <span class="mvCard__header__caption">監督: {data.director}</span>
+            <span class="mvCard__header__caption">監督: {data.director != null ? data.director : <UnreleasedTip />}</span>
         </div>
         <div class="mvCard__body">
             <h3>{data.title}</h3>
