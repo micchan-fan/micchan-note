@@ -1,17 +1,45 @@
 [
     {
+        "title": "夢を見る筋肉",
+        "ean": "4547366571981",
+        "singleTitle": "好きというのはロックだぜ!",
+        "singleType": "30th Single",
+        "release": "2022-08-31",
+        "songwriter": "秋元 康",
+        "composer": "月光テツヤ",
+        "arranger": "あらケン",
+        "type": "乃木坂軽音部",
+        "position": "メンバー",
+        "mvYtId": "kRrRkmGVZto",
+        "spotifyId": "1lZZgmDdON4qg7tROvD676"
+    },
+    {
+        "title": "ジャンピングジョーカーフラッシュ",
+        "ean": "4547366571967",
+        "singleTitle": "好きというのはロックだぜ!",
+        "singleType": "30th Single",
+        "release": "2022-08-31",
+        "songwriter": "秋元 康",
+        "composer": "Kuboty",
+        "arranger": "Kuboty",
+        "type": "4期生楽曲",
+        "position": "2列目",
+        "mvYtId": "Nvo1QclrFg4",
+        "spotifyId": "1lZZgmDdON4qg7tROvD676"
+    },
+    {
         "title": "Under's Love",
         "ean": "4547366571981",
         "singleTitle": "好きというのはロックだぜ!",
         "singleType": "30th Single",
         "release": "2022-08-31",
         "songwriter": "秋元 康",
-        "composer": null,
-        "arranger": null,
+        "composer": "amazuti",
+        "arranger": "amazuti",
         "type": "アンダー",
-        "position": "歌唱メンバー",
+        "position": "3列目",
         "mvYtId": "7RKrpUMuhSY",
-        "spotifyId": null
+        "spotifyId": "4vl61lDJcHA7kfgkkJZ1By"
     },
     {
         "title": "届かなくたって…",
@@ -23,7 +51,7 @@
         "composer": "外山大輔",
         "arranger": "外山大輔",
         "type": "アンダー",
-        "position": "歌唱メンバー",
+        "position": "3列目",
         "mvYtId": "738_JY4H3Ms",
         "spotifyId": "2n2yZ81g6NqkHOQ8qMQOci"
     },{
