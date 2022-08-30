@@ -436,4 +436,137 @@
         "asin": null,
         "youtubeId": null
     }
+    {
+        "title": "真夏の全国ツアー2022 (大阪公演)",
+        "startDate": "2022-07-19",
+        "endDate": "2022-07-20",
+        "location": {
+            "name": "大阪城ホール",
+            "latitude": "34.6896386",
+            "longitude": "135.527913"
+        },
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2022 (広島公演)",
+        "startDate": "2022-07-23",
+        "endDate": "2022-07-24",
+        "location": {
+            "name": "セキスイハイムスーパーアリーナ（宮城県総合運動公園総合体育館）",
+            "latitude": "34.3993684",
+            "longitude": "132.4553027"
+        },
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2022 (福岡公演)",
+        "startDate": "2022-07-30",
+        "endDate": "2022-07-31",
+        "location": {
+            "name": "マリンメッセ福岡A館",
+            "latitude": "33.6071732",
+            "longitude": "130.3999854"
+        },
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2022 (北海道公演)",
+        "startDate": "2022-08-11",
+        "endDate": "2022-08-12",
+        "location": {
+            "name": "真駒内セキスイハイムアイスアリーナ",
+            "latitude": "42.9993854",
+            "longitude": "141.3473742"
+        },
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2022 (宮城公演)",
+        "startDate": "2022-08-20",
+        "endDate": "2022-08-21",
+        "location": {
+            "name": "セキスイハイムスーパーアリーナ（宮城県総合運動公園総合体育館）",
+            "latitude": "38.3375288",
+            "longitude": "140.9509479"
+        },
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2022 (愛知公演)",
+        "startDate": "2022-08-24",
+        "endDate": "2022-08-25",
+        "location": {
+            "name": "日本ガイシスポーツプラザ（名古屋市総合体育館）",
+            "latitude": "35.0957877",
+            "longitude": "136.9214207"
+        },
+        "production": null,
+        "operation": null,
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2022 (東京公演)",
+        "startDate": "2022-08-29",
+        "endDate": "2022-08-31",
+        "location": {
+            "name": "明治神宮野球場",
+            "latitude": "35.6745308",
+            "longitude": "139.7170749"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2022",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
 ]
