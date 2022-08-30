@@ -1,6 +1,6 @@
 ---
 import Button from '../components/Button.astro';
-import DiscUnreleased from '../components/DiscUnreleased.astro';
+import UnreleasedTip from '../components/UnreleasedTip.astro';
 const {data} = Astro.props;
 ---
 
@@ -97,6 +97,6 @@ const {data} = Astro.props;
             </div>
         </div>
         <div class="discCard__footer">
-            <p>作詞: <span>{data.songwriter != null ? data.songwriter : <DiscUnreleased />}</span>／作曲: <span>{data.composer != null ? data.composer : <DiscUnreleased />}</span>／編曲: <span>{data.arranger != null ? data.arranger : <DiscUnreleased />}</span>／シングル: <span>{data.singleTitle != null ? data.singleTitle : <DiscUnreleased />} ({data.singleType != null ? data.singleType : <DiscUnreleased />})</span>／リリース: <span>{data.release != null ? data.release : <DiscUnreleased />}</span>／楽曲種別: <span>{data.type != null ? data.type : <DiscUnreleased />}</span>／ポジション: <span>{data.position != null ? data.position : <DiscUnreleased />}</span></p>
+            <p>作詞: <span>{data.songwriter != null ? data.songwriter : <UnreleasedTip />}</span>／作曲: <span>{data.composer != null ? data.composer : <UnreleasedTip />}</span>／編曲: <span>{data.arranger != null ? data.arranger : <UnreleasedTip />}</span>／シングル: <span>{data.singleTitle != null ? data.singleTitle : <UnreleasedTip />} ({data.singleType != null ? data.singleType : <UnreleasedTip />})</span>／リリース: <span>{data.release != null ? data.release : <UnreleasedTip />}</span>／楽曲種別: <span>{data.type != null ? data.type : <UnreleasedTip />}</span>／ポジション: <span>{data.position != null ? data.position : <UnreleasedTip />}</span></p>
         </div>
 </article>
