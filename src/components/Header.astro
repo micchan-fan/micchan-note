@@ -87,6 +87,12 @@ function menuButton(){
                             border-width: 0;
                         }
                     }
+                    &.external {
+                        &::after {
+                            content: "◢";
+                            color: #9e3eb2;
+                        }
+                    }
                 }
             }
             &__menuButton {
@@ -115,8 +121,12 @@ function menuButton(){
             <a href="/">ホーム</a>
             <a href="/profile">プロフィール</a>
             <a href="/works">作品</a>
-            <a href="/schedules">スケジュール</a>
-            <a href="/news">ニュース</a>
+            <a href="https://www.nogizaka46.com/s/n46/media/list?&members={%22member%22:[%2248019%22]}" class="external" target="_blank" rel="noopener">
+                スケジュール
+            </a>
+            <a href="https://www.nogizaka46.com/s/n46/diary/MEMBER/list?ima=3519&ct=48019" class="external" target="_blank" rel="noopener">
+                ブログ
+            </a>
             <a href="/about">このサイトについて</a>
         </div>
         <div class="header__container__menuButton" id="menuButton" onclick="menuButton()">
