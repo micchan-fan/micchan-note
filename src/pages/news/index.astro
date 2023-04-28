@@ -40,11 +40,10 @@ newsPosts = newsPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Dat
 
 	<WIP text="過去のニュースは随時追加する予定です。" />
 
-
-    {newsPosts.map((post) => (
-    <a href={post.url} class="newsList">
-        <h3 class="newsList__title">{post.title}</h3>
-        <span class="newsList__scheduleDate">{post.publishDate}</span>
-    </a>
-    ))}
+	{newsPosts.map((post) => (
+	<a href={"news/" + post.file.pathname.split('/').slice(-1).pop().replace('.md', '')} class="newsList">
+		<h3 class="newsList__title">{post.title}</h3>
+		<span class="newsList__scheduleDate">{post.publishDate}</span>
+	</a>
+	))}
 </BaseLayout>
