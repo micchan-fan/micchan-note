@@ -568,5 +568,221 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 30thSG アンダーライブ (東京公演)",
+        "startDate": "2022-09-27",
+        "endDate": "2022-09-29",
+        "location": {
+            "name": "TACHIKAWA STAGE GARDEN",
+            "latitude": "35.7047894",
+            "longitude": "139.4100606"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/30thsg_underlive/",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 30thSG アンダーライブ (大阪公演)",
+        "startDate": "2022-10-03",
+        "endDate": "2022-10-05",
+        "location": {
+            "name": "オリックス劇場",
+            "latitude": "34.678571680288",
+            "longitude": "135.49543819931"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/30thsg_underlive/",
+        "type": "有観客配信 (配信は最終日のみ)",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 31stSG アンダーライブ (神奈川公演)",
+        "startDate": "2022-12-01",
+        "endDate": "2022-12-01",
+        "location": {
+            "name": "KT Zepp Yokohama",
+            "latitude": "35.459973607375",
+            "longitude": "139.62581196399"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 31stSG アンダーライブ (北海道公演)",
+        "startDate": "2022-12-07",
+        "endDate": "2022-12-08",
+        "location": {
+            "name": "Zepp Sapporo",
+            "latitude": "35.7047894",
+            "longitude": "139.4100606"
+        },
+        "production": "ミュージックファン",
+        "operation": "ミュージックファン",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 31stSG アンダーライブ (福岡公演)",
+        "startDate": "2022-12-12",
+        "endDate": "2022-12-12",
+        "location": {
+            "name": "Zepp Fukuoka",
+            "latitude": "33.59259201855",
+            "longitude": "130.36336424355"
+        },
+        "production": "キョードー西日本",
+        "operation": "キョードー西日本",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 31stSG アンダーライブ (愛知公演)",
+        "startDate": "2022-12-14",
+        "endDate": "2022-12-15",
+        "location": {
+            "name": "Zepp Nagoya",
+            "latitude": "35.163361877373",
+            "longitude": "136.8847417492"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+            "title": "乃木坂46 31stSG アンダーライブ (大阪公演)",
+            "startDate": "2022-12-16",
+            "endDate": "2022-12-17",
+            "location": {
+                "name": "Zepp Namba",
+                "latitude": "34.65736280964",
+                "longitude": "135.50126490501"
+            },
+            "production": "ライブエグザム",
+            "operation": "ライブエグザム",
+            "sponsor": null,
+            "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+            "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+            "type": "有観客",
+            "nogiDogaId": null,
+            "asin": null,
+            "youtubeId": null
+    }, {
+        "title": "乃木坂46 31stSG アンダーライブ (神奈川公演※千秋楽)",
+        "startDate": "2022-12-19",
+        "endDate": "2022-12-19",
+        "location": {
+            "name": "KT Zepp Yokohama",
+            "latitude": "35.459973607375",
+            "longitude": "139.62581196399"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 32nd アンダーライブ (東京公演)",
+        "startDate": "2023-04-05",
+        "endDate": "2023-04-06",
+        "location": {
+            "name": "TOKYO DOME CITY HALL",
+            "latitude": "35.703151685238",
+            "longitude": "139.75461307471"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 32nd アンダーライブ (大阪公演)",
+        "startDate": "2023-04-08",
+        "endDate": "2023-04-09",
+        "location": {
+            "name": "グランキューブ大阪",
+            "latitude": "34.68929833198",
+            "longitude": "135.48626951645"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },{
+        "title": "乃木坂46 32nd アンダーライブ (愛知公演)",
+        "startDate": "2023-04-11",
+        "endDate": "2023-04-12",
+        "location": {
+            "name": "名古屋国際会議場 センチュリーホール",
+            "latitude": "35.13250413139",
+            "longitude": "136.89837992639"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },{
+        "title": "乃木坂46 32nd アンダーライブ (東京公演)",
+        "startDate": "2023-04-26",
+        "endDate": "2023-04-27",
+        "location": {
+            "name": "東京ガーデンシアター",
+            "latitude": "35.637836121831",
+            "longitude": "139.79205876875"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信 (配信は最終日のみ)",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
