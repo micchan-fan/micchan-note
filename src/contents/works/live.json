@@ -784,5 +784,137 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
-    }
+    },
+    {
+        "title": "真夏の全国ツアー2023 (北海道公演)",
+        "startDate": "2023-07-01",
+        "endDate": "2023-07-02",
+        "location": {
+            "name": "真駒内セキスイハイムアイスアリーナ",
+            "latitude": "42.9993854",
+            "longitude": "141.3473742"
+        },
+        "production": null,
+        "operation": "ミュージックファン",
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },{
+        "title": "真夏の全国ツアー2023 (大阪公演)",
+        "startDate": "2023-07-12",
+        "endDate": "2023-07-13",
+        "location": {
+            "name": "大阪城ホール",
+            "latitude": "34.6896386",
+            "longitude": "135.527913"
+        },
+        "production": null,
+        "operation": "キョードー大阪",
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2023 (広島公演)",
+        "startDate": "2023-07-15",
+        "endDate": "2023-07-16",
+        "location": {
+            "name": "セキスイハイムスーパーアリーナ（宮城県総合運動公園総合体育館）",
+            "latitude": "34.3993684",
+            "longitude": "132.4553027"
+        },
+        "production": null,
+        "operation": "キャンディープロモーション",
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2023 (沖縄公演) ※体調不良により未出演",
+        "startDate": "2023-07-22",
+        "endDate": "2023-07-23",
+        "location": {
+            "name": "沖縄アリーナ",
+            "latitude": "26.3329509",
+            "longitude": "127.7832326"
+        },
+        "production": null,
+        "operation": "キョードー西日本",
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2023 (愛知公演)",
+        "startDate": "2023-08-05",
+        "endDate": "2023-08-06",
+        "location": {
+            "name": "日本ガイシスポーツプラザ（名古屋市総合体育館）",
+            "latitude": "35.0957877",
+            "longitude": "136.9214207"
+        },
+        "production": null,
+        "operation": "サンデーフォークプロモーション",
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2023 (宮城公演)",
+        "startDate": "2023-08-14",
+        "endDate": "2023-08-15",
+        "location": {
+            "name": "セキスイハイムスーパーアリーナ（宮城県総合運動公園総合体育館）",
+            "latitude": "38.3375288",
+            "longitude": "140.9509479"
+        },
+        "production": null,
+        "operation": "G.I.P.",
+        "sponsor": null,
+        "supporter": null,
+        "website": null,
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
+    {
+        "title": "真夏の全国ツアー2023 (東京公演)",
+        "startDate": "2023-08-25",
+        "endDate": "2023-08-28",
+        "location": {
+            "name": "明治神宮野球場",
+            "latitude": "35.6745308",
+            "longitude": "139.7170749"
+        },
+        "production": null,
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": null,
+        "website": "https://www.nogizaka46.com/s/n46/page/33rd_single",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    },
 ]
