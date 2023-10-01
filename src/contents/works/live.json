@@ -916,5 +916,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
-    },
+    }, {
+        "title": "乃木坂46 33rdSG アンダーライブ",
+        "startDate": "2023-09-29",
+        "endDate": "2023-10-01",
+        "location": {
+            "name": "横浜アリーナ",
+            "latitude": "35.5122721",
+            "longitude": "139.617991"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信 (配信は最終日のみ)",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }
 ]
