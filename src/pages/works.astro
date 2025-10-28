@@ -10,10 +10,10 @@ import Accordion from '../utils/Accordion.astro'
 import AccordionItem from '../utils/AccordionItem.astro'
 import WIP from '../components/Wip.astro';
 
-import mv from '../contents/works/mv.json';
-import discography from '../contents/works/discography.json';
-import drama from '../contents/works/drama.json';
-import live from '../contents/works/live.json';
+import mv from '../data/works/mv.json';
+import discography from '../data/works/discography.json';
+import drama from '../data/works/drama.json';
+import live from '../data/works/live.json';
 
 let liveSorted = live.sort((a, b) => new Date(b.endDate).valueOf() - new Date(a.endDate).valueOf());
 let title = '作品';

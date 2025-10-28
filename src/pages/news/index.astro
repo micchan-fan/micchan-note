@@ -1,14 +1,13 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import WIP from '../../components/Wip.astro';
 let title = 'ニュース';
 
-interface MarkdownFrontmatter {
-	publishDate: number;
-}
-let newsPosts = Astro.fetchContent<MarkdownFrontmatter>('../../contents/newsPosts/*.md');
-newsPosts = newsPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+const newsPosts = (await getCollection('newsPosts')).sort(
+	(a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
+);
 
 ---
 
@@ -41,9 +40,9 @@ newsPosts = newsPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Dat
 	<WIP text="過去のニュースは随時追加する予定です。" />
 
 	{newsPosts.map((post) => (
-	<a href={"news/" + post.file.pathname.split('/').slice(-1).pop().replace('.md', '')} class="newsList">
-		<h3 class="newsList__title">{post.title}</h3>
-		<span class="newsList__scheduleDate">{post.publishDate}</span>
-	</a>
+		<a href={`news/${post.slug}`} class="newsList">
+			<h3 class="newsList__title">{post.data.title}</h3>
+			<span class="newsList__scheduleDate">{post.data.publishDate}</span>
+		</a>
 	))}
 </BaseLayout>
