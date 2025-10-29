@@ -970,5 +970,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 山下美月 卒業コンサート",
+        "startDate": "2024-05-11",
+        "endDate": "2024-05-12",
+        "location": {
+            "name": "東京ドーム",
+            "latitude": "35.7056396",
+            "longitude": "139.7518913"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/yamashita_graduation/",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
