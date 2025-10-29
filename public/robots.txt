@@ -3,4 +3,4 @@ User-agent: Twitterbot
 User-agent: *
 Allow: /
 
-Sitemap: https://micchan.fan/sitemap.xml
+Sitemap: https://micchan-note.vercel.app/sitemap.xml
