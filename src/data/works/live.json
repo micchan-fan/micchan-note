@@ -1150,5 +1150,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 大感謝祭2024",
+        "startDate": "2024-12-14",
+        "endDate": "2024-12-15",
+        "location": {
+            "name": "幕張メッセイベントホール",
+            "latitude": "35.6482395",
+            "longitude": "140.0302224"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/appreciiation_festival_2024",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
