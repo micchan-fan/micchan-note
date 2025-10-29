@@ -1186,5 +1186,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 与田祐希 卒業コンサート",
+        "startDate": "2025-02-22",
+        "endDate": "2025-02-23",
+        "location": {
+            "name": "みずほPayPayドーム福岡",
+            "latitude": "33.5953942",
+            "longitude": "130.3595429"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/yoda_graduation",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
