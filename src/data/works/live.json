@@ -1240,5 +1240,131 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2025 (北海道公演)",
+        "startDate": "2025-07-05",
+        "endDate": "2025-07-06",
+        "location": {
+            "name": "真駒内セキスイハイムアイスアリーナ",
+            "latitude": "42.9993854",
+            "longitude": "141.3473742"
+        },
+        "production": "ライブエグザム",
+        "operation": "ミュージックファン",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2025",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2025 (静岡公演)",
+        "startDate": "2025-07-12",
+        "endDate": "2025-07-13",
+        "location": {
+            "name": "エコパアリーナ（静岡アリーナ）",
+            "latitude": "34.7447738",
+            "longitude": "137.9665891"
+        },
+        "production": "ライブエグザム",
+        "operation": "サンデーフォークプロモーション静岡",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2025",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2025 (大阪公演)",
+        "startDate": "2025-07-16",
+        "endDate": "2025-07-17",
+        "location": {
+            "name": "大阪城ホール",
+            "latitude": "34.6896386",
+            "longitude": "135.527913"
+        },
+        "production": "ライブエグザム",
+        "operation": "キョードー大阪",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2025",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2025 (宮城公演)",
+        "startDate": "2025-08-02",
+        "endDate": "2025-08-03",
+        "location": {
+            "name": "セキスイハイムスーパーアリーナ（宮城県総合運動公園総合体育館）",
+            "latitude": "38.3375288",
+            "longitude": "140.9509479"
+        },
+        "production": "ライブエグザム",
+        "operation": "G.I.P.",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2025",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2025 (福岡公演)",
+        "startDate": "2025-08-09",
+        "endDate": "2025-08-10",
+        "location": {
+            "name": "マリンメッセ福岡A館",
+            "latitude": "33.6071732",
+            "longitude": "130.3999854"
+        },
+        "production": "ライブエグザム",
+        "operation": "キョードー⻄⽇本",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2025",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2025 (香川公演)",
+        "startDate": "2025-08-16",
+        "endDate": "2025-08-17",
+        "location": {
+            "name": "あなぶきアリーナ香川",
+            "latitude": "34.354164",
+            "longitude": "134.0441767"            
+        },
+        "production": "ライブエグザム",
+        "operation": "デューク⾼松",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2025",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2025 (東京公演)",
+        "startDate": "2025-09-04",
+        "endDate": "2025-09-07",
+        "location": {
+            "name": "明治神宮野球場",
+            "latitude": "35.6742569",
+            "longitude": "139.7147648"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2025",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
