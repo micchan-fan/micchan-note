@@ -1006,5 +1006,59 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2024 (大阪公演)",
+        "startDate": "2024-07-20",
+        "endDate": "2024-07-21",
+        "location": {
+            "name": "京セラドーム⼤阪",
+            "latitude": "34.6692804",
+            "longitude": "135.473954"
+        },
+        "production": "ライブエグザム",
+        "operation": "キョードー大阪",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2024",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2024 (愛知公演)",
+        "startDate": "2024-08-24",
+        "endDate": "2024-08-25",
+        "location": {
+            "name": "バンテリンドームナゴヤ",
+            "latitude": "35.1860075",
+            "longitude": "136.9452112"
+        },
+        "production": "ライブエグザム",
+        "operation": "サンデーフォークプロモーション",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2024",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "真夏の全国ツアー2024 (東京公演)",
+        "startDate": "2024-09-02",
+        "endDate": "2024-09-04",
+        "location": {
+            "name": "明治神宮野球場",
+            "latitude": "35.6745308",
+            "longitude": "139.7170749"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/summer_tour2024",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
