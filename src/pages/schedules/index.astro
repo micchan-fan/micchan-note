@@ -37,7 +37,7 @@ const schedules = (await getCollection('schedules')).sort(
 <BaseLayout title={title}>
 	<PageHeader title={title} marginBottom="16" />
 
-	<WIP text="過去のスケジュールは随時追加する予定です。" />
+	<!-- <WIP text="過去のスケジュールは随時追加する予定です。" /> -->
 
 	{schedules.map((post) => (
 		<a href={`schedule/${post.slug}`} class="newsList">

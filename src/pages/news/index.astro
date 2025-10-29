@@ -37,7 +37,7 @@ const newsPosts = (await getCollection('newsPosts')).sort(
 <BaseLayout title={title}>
 	<PageHeader title={title} marginBottom="16" />
 
-	<WIP text="過去のニュースは随時追加する予定です。" />
+	<!-- <WIP text="過去のニュースは随時追加する予定です。" /> -->
 
 	{newsPosts.map((post) => (
 		<a href={`news/${post.slug}`} class="newsList">
