@@ -1366,5 +1366,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 39thSG アンダーライブ",
+        "startDate": "2025-10-07",
+        "endDate": "2025-10-09",
+        "location": {
+            "name": "横浜BUNTAI",
+            "latitude": "35.4410445",
+            "longitude": "139.6339649"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
