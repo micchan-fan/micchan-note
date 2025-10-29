@@ -1060,5 +1060,95 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 36thSG アンダーライブ (福岡公演)",
+        "startDate": "2024-10-07",
+        "endDate": "2024-10-08",
+        "location": {
+            "name": "Zepp Fukuoka",
+            "latitude": "33.5935422",
+            "longitude": "130.3605838"
+        },
+        "production": "ライブエグザム",
+        "operation": "キョードー西日本",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 36thSG アンダーライブ (愛知公演)",
+        "startDate": "2024-10-14",
+        "endDate": "2024-10-15",
+        "location": {
+            "name": "Zepp Nagoya",
+            "latitude": "35.1633536",
+            "longitude": "136.8821513"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 36thSG アンダーライブ (大阪公演)",
+        "startDate": "2024-10-21",
+        "endDate": "2024-10-22",
+        "location": {
+            "name": "Zepp Osaka Bayside",
+            "latitude": "34.6621016",
+            "longitude": "135.4325808"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 36thSG アンダーライブ (北海道公演)",
+        "startDate": "2024-10-28",
+        "endDate": "2024-10-29",
+        "location": {
+            "name": "Zepp Sapporo",
+            "latitude": "43.0495339",
+            "longitude": "141.3507441"
+        },
+        "production": "ライブエグザム",
+        "operation": "ミュージックファン",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "乃木坂46 36thSG アンダーライブ (神奈川公演)",
+        "startDate": "2024-11-18",
+        "endDate": "2024-11-20",
+        "location": {
+            "name": "KT Zepp Yokohama",
+            "latitude": "35.895081",
+            "longitude": "139.6307319"
+        },
+        "production": "ライブエグザム",
+        "operation": "ライブエグザム",
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
