@@ -1222,5 +1222,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 13th YEAR BIRTHDAY LIVE",
+        "startDate": "2025-05-17",
+        "endDate": "2025-05-18",
+        "location": {
+            "name": "味の素スタジアム",
+            "latitude": "35.664058",
+            "longitude": "139.5245939"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/13th_birthday_live",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
