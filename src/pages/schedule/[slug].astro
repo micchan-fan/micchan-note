@@ -1,16 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-    return Astro.fetchContent('../../contents/schedules/*.md').map((schedule) => ({
+    const entries = await getCollection('schedules');
+    return entries.map((entry) => ({
 		params: {
-            slug: schedule.file.pathname.split('/').slice(-1).pop().replace('.md', '')
+            slug: entry.slug
         },
-		props: { schedule }
+		props: { entry }
 	}));
 }
 
-const {schedule} = Astro.props;
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const data = entry.data;
 ---
 
 <style lang="scss">
@@ -36,7 +40,7 @@ const {schedule} = Astro.props;
 }
 </style>
 
-<BaseLayout>
-    {schedule.title}
-    {schedule.astro.html}
+<BaseLayout title={data.title}>
+    {data.title}
+    <Content />
 </BaseLayout>

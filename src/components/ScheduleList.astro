@@ -1,14 +1,13 @@
 ---
-interface MarkdownFrontmatter {
-    schedule: number;
-}
-let schedules = Astro.fetchContent<MarkdownFrontmatter>('../contents/schedules/*.md');
-schedules = schedules.filter(a => {
-  const date = new Date(a.schedule).valueOf();
-  const daytoday = Date.now();
-  return (date >= daytoday);
-});
-schedules = schedules.sort((a, b) => new Date(a.schedule).valueOf() - new Date(b.schedule).valueOf());
+import { getCollection } from 'astro:content';
+
+const schedules = (await getCollection('schedules'))
+  .filter((entry) => {
+    const date = new Date(entry.data.schedule).valueOf();
+    const daytoday = Date.now();
+    return date >= daytoday;
+  })
+  .sort((a, b) => new Date(a.data.schedule).valueOf() - new Date(b.data.schedule).valueOf());
 ---
 
 <style lang="scss">
@@ -35,8 +34,8 @@ schedules = schedules.sort((a, b) => new Date(a.schedule).valueOf() - new Date(b
 </style>
 
 {schedules.slice(0, 3).map((schedule) => (
-<a href={"schedule/" + schedule.file.pathname.split('/').slice(-1).pop().replace('.md', '')} class="scheduleList">
-    <h3 class="scheduleList__title">{schedule.title}</h3>
-    <span class="scheduleList__scheduleDate">{schedule.schedule}</span>
-</a>
+	<a href={`schedule/${schedule.slug}`} class="scheduleList">
+		<h3 class="scheduleList__title">{schedule.data.title}</h3>
+		<span class="scheduleList__scheduleDate">{schedule.data.schedule}</span>
+	</a>
 ))}

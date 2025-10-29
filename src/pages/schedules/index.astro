@@ -1,14 +1,13 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import WIP from '../../components/Wip.astro';
 let title = 'スケジュール';
 
-interface MarkdownFrontmatter {
-	schedule: number;
-}
-let schedules = Astro.fetchContent<MarkdownFrontmatter>('../../contents/schedules/*.md');
-schedules = schedules.sort((a, b) => new Date(b.schedule).valueOf() - new Date(a.schedule).valueOf());
+const schedules = (await getCollection('schedules')).sort(
+	(a, b) => new Date(b.data.schedule).valueOf() - new Date(a.data.schedule).valueOf()
+);
 
 ---
 
@@ -38,12 +37,12 @@ schedules = schedules.sort((a, b) => new Date(b.schedule).valueOf() - new Date(a
 <BaseLayout title={title}>
 	<PageHeader title={title} marginBottom="16" />
 
-	<WIP text="過去のスケジュールは随時追加する予定です。" />
+	<!-- <WIP text="過去のスケジュールは随時追加する予定です。" /> -->
 
-    {schedules.map((post) => (
-    <a href={post.url} class="newsList">
-        <h3 class="newsList__title">{post.title}</h3>
-        <span class="newsList__scheduleDate">{post.schedule}</span>
-    </a>
-    ))}
+	{schedules.map((post) => (
+		<a href={`schedule/${post.slug}`} class="newsList">
+			<h3 class="newsList__title">{post.data.title}</h3>
+			<span class="newsList__scheduleDate">{post.data.schedule}</span>
+		</a>
+	))}
 </BaseLayout>
