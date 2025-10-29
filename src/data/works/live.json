@@ -988,5 +988,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 35thSG アンダーライブ",
+        "startDate": "2024-06-07",
+        "endDate": "2024-06-09",
+        "location": {
+            "name": "有明アリーナ",
+            "latitude": "35.6433644",
+            "longitude": "139.7943083"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
