@@ -1204,5 +1204,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 38thSG アンダーライブ（佐藤楓 卒業セレモニー）",
+        "startDate": "2025-04-05",
+        "endDate": "2025-04-05",
+        "location": {
+            "name": "ぴあアリーナMM",
+            "latitude": "35.4558788",
+            "longitude": "139.6287176"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
