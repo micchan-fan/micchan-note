@@ -934,5 +934,23 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 34thSG アンダーライブ",
+        "startDate": "2024-01-25",
+        "endDate": "2024-01-27",
+        "location": {
+            "name": "ぴあアリーナMM",
+            "latitude": "35.4558788",
+            "longitude": "139.6287176"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信 (配信は最終日のみ)",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
