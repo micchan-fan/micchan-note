@@ -1,0 +1,314 @@
+---
+type Props = {
+	src: string;
+	title?: string;
+	allow?: string;
+	allowFullscreen?: boolean;
+	fixedHeight?: string;
+	aspectRatio?: string;
+	provider?: string;
+	fillParent?: boolean;
+};
+
+const {
+	src,
+	title = '',
+	allow = '',
+	allowFullscreen = true,
+	fixedHeight,
+	aspectRatio = '56.25%',
+	provider,
+	fillParent = false,
+} = Astro.props as Props;
+
+const mode = fixedHeight ? 'fixed' : 'ratio';
+const layoutClass = fillParent ? 'fill' : mode;
+const providerClass = provider ? `lazyIframe--${provider.toLowerCase()}` : '';
+const dimensionStyle = fillParent
+	? undefined
+	: mode === 'fixed'
+		? `--lazy-iframe-height:${fixedHeight};`
+		: `--lazy-iframe-ratio:${aspectRatio};`;
+---
+
+<style lang="scss">
+	.lazyIframe {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		border-radius: inherit;
+		background-color: inherit;
+
+		&::before {
+			content: '';
+			display: block;
+		}
+
+		&.lazyIframe--ratio {
+			&::before {
+				padding-top: var(--lazy-iframe-ratio, 56.25%);
+			}
+		}
+
+		&.lazyIframe--fixed {
+			height: var(--lazy-iframe-height, 352px);
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&.lazyIframe--fill {
+			height: 100%;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&__inner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&__frame {
+			border: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: inherit;
+		}
+
+		&__placeholder {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: inherit;
+			border-radius: inherit;
+		}
+
+		&--loaded {
+			background-color: transparent;
+		}
+
+		&--youtube {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+</style>
+
+<div
+	class={`lazyIframe lazyIframe--${layoutClass} ${providerClass}`.trim()}
+	data-src={src}
+	data-title={title}
+	data-allow={allow}
+	data-fullscreen={allowFullscreen ? 'true' : 'false'}
+	style={dimensionStyle}
+>
+	<div class="lazyIframe__inner">
+		<div class="lazyIframe__placeholder" aria-hidden="true"></div>
+	</div>
+	<noscript>
+		<iframe
+			class="lazyIframe__frame"
+			src={src}
+			title={title}
+			allow={allow}
+			loading="lazy"
+			allowfullscreen={allowFullscreen}
+		></iframe>
+	</noscript>
+</div>
+
+<script is:inline>
+	(() => {
+		const wrapper = document.currentScript?.previousElementSibling;
+		if (!wrapper) return;
+
+		const registerWrapper = () => {
+			if (!window.__lazyIframeController) {
+				const pending = new Set();
+				const frameMap = new Map();
+				let resizeObserver;
+				let supportsResizeObserver = typeof ResizeObserver !== 'undefined';
+				let allowAutoLoad = true;
+				let listeningForUserScroll = false;
+				const userEvents = ['wheel', 'touchmove', 'keydown'];
+				const scrollKeys = new Set([
+					'ArrowDown',
+					'ArrowUp',
+					'ArrowLeft',
+					'ArrowRight',
+					'PageDown',
+					'PageUp',
+					'Home',
+					'End',
+					' ',
+					'Spacebar',
+					'Space',
+				]);
+				let observer;
+				let resumeTimeoutId;
+
+				const updateFrameSize = (target, frame, rect) => {
+					if (!frame || !target) return;
+					const height = rect?.height ?? target.getBoundingClientRect().height;
+					const width = rect?.width ?? target.getBoundingClientRect().width;
+					if (height) {
+						const roundedHeight = Math.round(height);
+						frame.style.height = `${roundedHeight}px`;
+						frame.setAttribute('height', `${roundedHeight}`);
+					}
+					if (width) {
+						const roundedWidth = Math.round(width);
+						frame.style.width = `${roundedWidth}px`;
+						frame.setAttribute('width', `${roundedWidth}`);
+					}
+				};
+
+				const observeFrameSize = (target, frame) => {
+					frameMap.set(target, frame);
+					if (!supportsResizeObserver) {
+						updateFrameSize(target, frame);
+						return;
+					}
+					if (!resizeObserver) {
+						resizeObserver = new ResizeObserver((entries) => {
+							entries.forEach((entry) => {
+								const currentFrame = frameMap.get(entry.target);
+								if (!currentFrame) return;
+								updateFrameSize(entry.target, currentFrame, entry.contentRect);
+							});
+						});
+					}
+					resizeObserver.observe(target);
+					updateFrameSize(target, frame);
+				};
+
+				const loadIframe = (target) => {
+					if (!target || target.dataset.loaded === 'true') return;
+					const inner = target.querySelector('.lazyIframe__inner');
+					if (!inner) return;
+
+					const frame = document.createElement('iframe');
+					frame.src = target.dataset.src || '';
+					frame.title = target.dataset.title || '';
+					frame.loading = 'lazy';
+					frame.className = 'lazyIframe__frame';
+
+					if (target.dataset.allow) {
+						frame.setAttribute('allow', target.dataset.allow);
+					}
+
+					if (target.dataset.fullscreen === 'true') {
+						frame.setAttribute('allowfullscreen', '');
+					}
+
+					inner.innerHTML = '';
+					inner.appendChild(frame);
+					target.dataset.loaded = 'true';
+					target.classList.add('lazyIframe--loaded');
+					frame.setAttribute('frameborder', '0');
+					observeFrameSize(target, frame);
+				};
+
+				const flushPending = () => {
+					pending.forEach((target) => {
+						if (!target.isConnected) return;
+						loadIframe(target);
+						observer.unobserve(target);
+					});
+					pending.clear();
+				};
+
+				const resumeAutoLoad = () => {
+					if (allowAutoLoad) return;
+					allowAutoLoad = true;
+					detachUserScrollListeners();
+					clearTimeout(resumeTimeoutId);
+					resumeTimeoutId = undefined;
+					flushPending();
+				};
+
+				const handleUserScroll = (event) => {
+					if (allowAutoLoad) return;
+					if (
+						event.type === 'keydown' &&
+						!(event instanceof KeyboardEvent && scrollKeys.has(event.key))
+					) {
+						return;
+					}
+					resumeAutoLoad();
+				};
+
+				const attachUserScrollListeners = () => {
+					if (listeningForUserScroll) return;
+					listeningForUserScroll = true;
+					userEvents.forEach((type) =>
+						window.addEventListener(type, handleUserScroll, { passive: true }),
+					);
+				};
+
+				const detachUserScrollListeners = () => {
+					if (!listeningForUserScroll) return;
+					listeningForUserScroll = false;
+					userEvents.forEach((type) =>
+						window.removeEventListener(type, handleUserScroll),
+					);
+				};
+
+				observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (!entry.isIntersecting) {
+								pending.delete(entry.target);
+								return;
+							}
+
+							if (allowAutoLoad) {
+								loadIframe(entry.target);
+								observer.unobserve(entry.target);
+							} else {
+								pending.add(entry.target);
+							}
+						});
+					},
+					{
+						rootMargin: '160px 0px',
+						threshold: 0.1,
+					},
+				);
+
+				window.__lazyIframeController = {
+					register(element) {
+						observer.observe(element);
+					},
+					pauseUntilUserScroll(autoResumeDelay) {
+						if (!allowAutoLoad) return;
+						allowAutoLoad = false;
+						attachUserScrollListeners();
+						if (typeof autoResumeDelay === 'number') {
+							clearTimeout(resumeTimeoutId);
+							resumeTimeoutId = window.setTimeout(
+								resumeAutoLoad,
+								autoResumeDelay,
+							);
+						}
+					},
+					syncFrameSize: observeFrameSize,
+					resumeAutoLoad,
+				};
+			}
+
+			window.__lazyIframeController.register(wrapper);
+		};
+
+		registerWrapper();
+	})();
+</script>

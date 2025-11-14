@@ -170,10 +170,10 @@ let title = '作品';
 
 	<div class="toc">
 		<ul>
-			<li><a href="#discography">ディスコグラフィー</a></li>
-			<li><a href="#mv">MV</a></li>
-			<li><a href="#live">ライブ</a></li>
-			<li><a href="#drama">ドラマ</a></li>
+			<li><a href="#discography" data-lazy-scroll-lock>ディスコグラフィー</a></li>
+			<li><a href="#mv" data-lazy-scroll-lock>MV</a></li>
+			<li><a href="#live" data-lazy-scroll-lock>ライブ</a></li>
+			<li><a href="#drama" data-lazy-scroll-lock>ドラマ</a></li>
 		</ul>
 	</div>
 
@@ -253,3 +253,15 @@ let title = '作品';
 	<!-- Todo: 出演はスケジュールにまとめる-->
 	<!-- Todo: ロケ地欲しいよねー。-->
 </BaseLayout>
+
+<script is:inline>
+	const SHORTCUT_RESUME_DELAY = 600;
+
+	document.addEventListener('click', (event) => {
+		const shortcut = event.target.closest('[data-lazy-scroll-lock]');
+		if (!shortcut) return;
+		if (window.__lazyIframeController?.pauseUntilUserScroll) {
+			window.__lazyIframeController.pauseUntilUserScroll(SHORTCUT_RESUME_DELAY);
+		}
+	});
+</script>

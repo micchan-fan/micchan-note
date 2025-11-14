@@ -1,6 +1,7 @@
 ---
 import Button from '../components/Button.astro';
 import UnreleasedTip from '../components/UnreleasedTip.astro';
+import LazyIframe from '../components/LazyIframe.astro';
 const {data} = Astro.props;
 ---
 
@@ -28,15 +29,13 @@ const {data} = Astro.props;
                 display: block;
                 padding-top: 56.25%;
             }
-            > iframe {
-                width: 100%;
-                height: auto;
+            > .lazyIframe {
                 position: absolute;
-                border-radius: 8px 8px 0 0;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
+                border-radius: 8px 8px 0 0;
             }
             &__caption {
                 position: absolute;
@@ -83,7 +82,13 @@ const {data} = Astro.props;
 <article class="mvCard">
     <!-- Todo: YouTubeがないケースを想定していないので、propertyを用意する-->
         <div class="mvCard__header">
-            <iframe src={"https://www.youtube.com/embed/" + data.youtubeId} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <LazyIframe
+                src={"https://www.youtube.com/embed/" + data.youtubeId}
+                title={`${data.title} | YouTube Player`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                provider="youtube"
+                fillParent={true}
+            />
             <span class="mvCard__header__caption">監督: {data.director != null ? data.director : <UnreleasedTip />}</span>
         </div>
         <div class="mvCard__body">

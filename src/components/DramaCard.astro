@@ -1,5 +1,6 @@
 ---
 import Button from '../components/Button.astro';
+import LazyIframe from '../components/LazyIframe.astro';
 const {data} = Astro.props;
 ---
 
@@ -27,14 +28,13 @@ const {data} = Astro.props;
                 display: block;
                 padding-top: 56.25%;
             }
-            > iframe {
-                width: 100%;
-                height: auto;
+            > .lazyIframe {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
+                border-radius: 8px 8px 0 0;
             }
             &__caption {
                 position: absolute;
@@ -86,7 +86,13 @@ const {data} = Astro.props;
 <article class="dramaCard">
     <!-- Todo: YouTubeがないケースを想定していないので、propertyを用意する-->
         <div class="dramaCard__header">
-            <iframe src={"https://www.youtube.com/embed/" + data.youtubeId} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <LazyIframe
+                src={"https://www.youtube.com/embed/" + data.youtubeId}
+                title={`${data.title} | YouTube Player`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                provider="youtube"
+                fillParent={true}
+            />
             <span class="dramaCard__header__caption">監督: {data.director}</span>
         </div>
         <div class="dramaCard__body">
