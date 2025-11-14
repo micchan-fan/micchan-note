@@ -21,21 +21,26 @@ const {data} = Astro.props;
             position: relative;
             width: 100%;
             border-radius: 8px 8px 0 0;
-            background-color: #efefef;
-            overflow: hidden;
 
-            &::before {
-                content:"";
-                display: block;
-                padding-top: 56.25%;
-            }
-            > .lazyIframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+            &__media {
+                position: relative;
+                background-color: #efefef;
                 border-radius: 8px 8px 0 0;
+
+                &::before {
+                    content:"";
+                    display: block;
+                    padding-top: 56.25%;
+                }
+                > .lazyIframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px 8px 0 0;
+                    pointer-events: none;
+                }
             }
             &__caption {
                 position: absolute;
@@ -82,13 +87,15 @@ const {data} = Astro.props;
 <article class="mvCard">
     <!-- Todo: YouTubeがないケースを想定していないので、propertyを用意する-->
         <div class="mvCard__header">
-            <LazyIframe
-                src={"https://www.youtube.com/embed/" + data.youtubeId}
-                title={`${data.title} | YouTube Player`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                provider="youtube"
-                fillParent={true}
-            />
+            <div class="mvCard__header__media">
+                <LazyIframe
+                    src={"https://www.youtube.com/embed/" + data.youtubeId}
+                    title={`${data.title} | YouTube Player`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    provider="youtube"
+                    fillParent={true}
+                />
+            </div>
             <span class="mvCard__header__caption">監督: {data.director != null ? data.director : <UnreleasedTip />}</span>
         </div>
         <div class="mvCard__body">
