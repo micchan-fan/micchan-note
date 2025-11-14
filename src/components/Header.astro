@@ -2,16 +2,17 @@
 const path = Astro.site.pathname;
 ---
 <script>
-
-function menuButton(){
+document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.getElementById("menuContent");
+	const button = document.getElementById("menuButton");
 
-	if (menu.style.display=="flex") {
-		menu.style.display ="none";
-	} else {
-		menu.style.display ="flex";
-	}
-}
+	if (!menu || !button) return;
+
+	button.addEventListener("click", () => {
+		const computedDisplay = window.getComputedStyle(menu).display;
+		menu.style.display = computedDisplay === "none" ? "flex" : "none";
+	});
+});
 </script>
 <style lang="scss">
     .header {
@@ -129,7 +130,7 @@ function menuButton(){
             </a>
             <a href="/about">このサイトについて</a>
         </div>
-        <div class="header__container__menuButton" id="menuButton" onclick="menuButton()">
+        <div class="header__container__menuButton" id="menuButton">
             メニュー
         </div>
     </div>
