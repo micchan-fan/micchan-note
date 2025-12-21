@@ -1384,5 +1384,59 @@
         "nogiDogaId": null,
         "asin": null,
         "youtubeId": null
+    }, {
+        "title": "乃木坂46 40thSG アンダーライブ",
+        "startDate": "2025-12-19",
+        "endDate": "2025-12-21",
+        "location": {
+            "name": "⽇本武道館",
+            "latitude": "35.69333",
+            "longitude": "139.7497076"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "松尾美佑 卒業セレモニー (乃木坂46 40thSG アンダーライブ Day1)",
+        "startDate": "2025-12-19",
+        "endDate": "2025-12-19",
+        "location": {
+            "name": "⽇本武道館",
+            "latitude": "35.69333",
+            "longitude": "139.7497076"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
+    }, {
+        "title": "矢久保美緒 卒業セレモニー (乃木坂46 40thSG アンダーライブ Day2)",
+        "startDate": "2025-12-20",
+        "endDate": "2025-12-20",
+        "location": {
+            "name": "⽇本武道館",
+            "latitude": "35.69333",
+            "longitude": "139.7497076"
+        },
+        "production": "ライブエグザム",
+        "operation": null,
+        "sponsor": null,
+        "supporter": "ソニー・ミュージックレーベルズ／ノース・リバー",
+        "website": "https://www.nogizaka46.com/s/n46/page/underlive",
+        "type": "有観客配信",
+        "nogiDogaId": null,
+        "asin": null,
+        "youtubeId": null
     }
 ]
